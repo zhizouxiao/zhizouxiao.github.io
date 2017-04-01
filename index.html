@@ -169,7 +169,7 @@
       </a>
     </div>
       
-        <h1 class="site-subtitle" itemprop="description"></h1>
+        <h1 class="site-subtitle" itemprop="description">lifelong learning</h1>
       
   </div>
 
@@ -739,6 +739,139 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zhizouxiao.github.io/2016/12/10/linux-top-commond/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Eli Wang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/logo.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eli's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/10/linux-top-commond/" itemprop="url">
+                  (linux常用命令)top
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-10T00:00:00+08:00">
+                2016-12-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/12/10/linux-top-commond/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2016/12/10/linux-top-commond/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="top-命令"><a href="#top-命令" class="headerlink" title="top 命令"></a>top 命令</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">top -c</div><div class="line">top - 17:48:50 up 151 days,  3:31,  1 user,  load average: 0.07, 0.12, 0.09</div><div class="line">Tasks: 132 total,   1 running, 131 sleeping,   0 stopped,   0 zombie</div><div class="line">Cpu(s):  1.0%us,  0.5%sy,  0.2%ni, 98.3%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st</div><div class="line">Mem:   4194304k total,  4179548k used,    14756k free,        0k buffers</div><div class="line">Swap:  2097152k total,   782360k used,  1314792k free,  1977088k cached</div><div class="line"></div><div class="line">PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND</div><div class="line">1033 mysql     20   0 1158m 7988 1620 S  0.3  0.2  30:16.67 /usr/libexec/mysqld --basedi</div><div class="line">7134 tyhall    20   0 1605m 167m  15m S  0.3  4.1   0:29.42 pypy run.py UT001 192.168.10</div><div class="line">7136 tyhall    20   0  347m 166m  17m S  0.3  4.1   0:24.37 pypy run.py GT21-001-998-1 1</div><div class="line"></div><div class="line">17:48:50 ： 系统当前时间</div><div class="line">151 days, 3:31 ： 系统开机到现在经过了多少时间</div><div class="line">1 users ： 当前2用户在线</div><div class="line">load average: 0.07, 0.12, 0.09： 系统1分钟、5分钟、15分钟的CPU负载信息</div><div class="line"></div><div class="line">Tasks：任务;</div><div class="line">132 total：当前有132个进程。</div><div class="line">1 running：1个进程正在运行</div><div class="line">131 sleeping：131个进程睡眠</div><div class="line">0 stopped：停止的进程数</div><div class="line">0 zombie：僵死的进程数</div><div class="line"></div><div class="line">Cpu(s)：表示这一行显示CPU总体信息</div><div class="line">1.0%us：用户态进程占用CPU时间百分比，不包含renice值为负的任务占用的CPU的时间。</div><div class="line">0.5%sy：内核占用CPU时间百分比</div><div class="line">0.2%ni：改变过优先级的进程占用CPU的百分比</div><div class="line">98.3%id：空闲CPU时间百分比</div><div class="line">0.0%wa：等待I/O的CPU时间百分比</div><div class="line">0.0%hi：CPU硬中断时间百分比</div><div class="line">0.0%si：CPU软中断时间百分比</div><div class="line">注：这里显示数据是所有cpu的平均值，如果想看每一个cpu的处理情况，按1即可；折叠，再次按1；(centos)</div><div class="line"></div><div class="line">Mem：内存</div><div class="line">4194304k total：物理内存总量</div><div class="line">4179548k used：使用的物理内存量</div><div class="line">14756k free：空闲的物理内存量</div><div class="line">0k buffers：用作内核缓存的物理内存量</div><div class="line"></div><div class="line">Swap：交换空间</div><div class="line">2097152k total：交换区总量</div><div class="line">782360k used：使用的交换区量</div><div class="line">1314792k free：空闲的交换区量</div><div class="line">1977088k cached：缓冲交换区总量</div><div class="line"></div><div class="line">PID：进程的ID</div><div class="line">USER：进程所有者</div><div class="line">PR：进程的优先级别，越小越优先被执行</div><div class="line">NI：值Nice Value 如果为负值，则有较高优先级；如果为正值则为较低优先级；如果为0，则无优先级调整</div><div class="line">VIRT：进程占用的虚拟内存</div><div class="line">RES：进程占用的物理内存</div><div class="line">SHR：进程使用的共享内存</div><div class="line">S：进程的状态。S表示休眠，R表示正在运行，Z表示僵死状态，N表示该进程优先值为负数</div><div class="line">%CPU：进程占用CPU的使用率</div><div class="line">%MEM：进程使用的物理内存和总内存的百分比</div><div class="line">TIME+：该进程启动后占用的总的CPU时间，即占用CPU使用时间的累加值。</div><div class="line">COMMAND：进程启动命令名称</div><div class="line"></div><div class="line">q：退出top命令</div><div class="line">&lt;Space&gt;：立即刷新</div><div class="line">s：设置刷新时间间隔</div><div class="line">c：显示命令完全模式</div><div class="line">t: 显示或隐藏进程和CPU状态信息</div><div class="line">m：显示或隐藏内存状态信息</div><div class="line">l：显示或隐藏uptime信息</div><div class="line">f：增加或减少进程显示标志</div><div class="line">S：累计模式，会把已完成或退出的子进程占用的CPU时间累计到父进程的MITE+</div><div class="line">P：按%CPU使用率排行</div><div class="line">T：按MITE+排行</div><div class="line">M：按%MEM排行</div><div class="line">u：指定显示用户进程</div><div class="line">r：修改进程renice值</div><div class="line">k: <span class="built_in">kill</span>进程</div><div class="line">i：只显示正在运行的进程</div><div class="line">W：保存对top的设置到文件^/.toprc，下次启动将自动调用toprc文件的设置。</div><div class="line">h：帮助命令。</div><div class="line">q：退出</div><div class="line"></div><div class="line">如果只需要查看内存：可用free命令。只查看uptime信息（第一行），可用uptime命令；</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://zhizouxiao.github.io/2016/12/10/linux-memory-commond/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -830,139 +963,6 @@
           
             <h5 id="free-命令"><a href="#free-命令" class="headerlink" title="free 命令"></a>free 命令</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">free -h </div><div class="line">             total       used       free     shared    buffers     cached</div><div class="line">Mem:          4.0G       2.6G       1.4G       5.0M         0B       426M</div><div class="line">-/+ buffers/cache:       2.2G       1.8G</div><div class="line">Swap:         2.0G       766M       1.3G</div><div class="line"></div><div class="line">buffer：将要写到磁盘上的内容</div><div class="line">cached: 缓存到内存，供以后使用的数据</div><div class="line">2.2G: used(2.6G) - buffer(0B) - cached(426M) </div><div class="line">1.8G: used(1.4G) + buffer(0B) + cached(426M)</div></pre></td></tr></table></figure>
 <h4 id="vmstat-命令"><a href="#vmstat-命令" class="headerlink" title="vmstat 命令"></a>vmstat 命令</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">shell: vmstat -S m  1 3</div><div class="line">procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----</div><div class="line"> r  b   swpd   free   buff  cache   si   so    bi    bo   <span class="keyword">in</span>   cs us sy id wa st</div><div class="line"> 2  0      0    314    323  14996    0    0     1    25    1    5  1  1 98  0  0</div><div class="line"> 0  0      0    314    323  14996    0    0     0   164 1236 2243  3  1 95  1  0</div><div class="line"> 0  0      0    312    323  14996    0    0     0    72 1233 2324  3  1 95  0  0</div><div class="line"></div><div class="line">Procs（进程）:</div><div class="line">r: 运行队列中进程数量</div><div class="line">b: 等待IO的进程数量</div><div class="line"></div><div class="line">Memory（内存）:</div><div class="line">swpd: 使用虚拟内存大小</div><div class="line">free: 可用内存大小</div><div class="line">buff: 用作缓冲的内存大小</div><div class="line">cache: 用作缓存的内存大小</div><div class="line"></div><div class="line">Swap:</div><div class="line">si: 每秒从交换区写到内存的大小</div><div class="line">so: 每秒写入交换区的内存大小</div><div class="line"></div><div class="line">IO：（现在的Linux版本块的大小为1024bytes）</div><div class="line">bi: 每秒读取的块数</div><div class="line">bo: 每秒写入的块数</div><div class="line"></div><div class="line">system：</div><div class="line"><span class="keyword">in</span>: 每秒中断数，包括时钟中断</div><div class="line">cs: 每秒上下文切换数</div><div class="line"></div><div class="line">CPU（以百分比表示）</div><div class="line">us: 用户进程执行时间(user time)</div><div class="line">sy: 系统进程执行时间(system time)</div><div class="line">id: 空闲时间(包括IO等待时间)</div><div class="line">wa: 等待IO时间</div></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://zhizouxiao.github.io/2016/12/10/linux-top-commond/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Eli Wang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/logo.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Eli's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/10/linux-top-commond/" itemprop="url">
-                  (linux常用命令)top
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-10T00:00:00+08:00">
-                2016-12-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-            <!--noindex-->
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/12/10/linux-top-commond/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2016/12/10/linux-top-commond/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-              <!--/noindex-->
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h5 id="top-命令"><a href="#top-命令" class="headerlink" title="top 命令"></a>top 命令</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">top -c</div><div class="line">top - 17:48:50 up 151 days,  3:31,  1 user,  load average: 0.07, 0.12, 0.09</div><div class="line">Tasks: 132 total,   1 running, 131 sleeping,   0 stopped,   0 zombie</div><div class="line">Cpu(s):  1.0%us,  0.5%sy,  0.2%ni, 98.3%id,  0.0%wa,  0.0%hi,  0.0%si,  0.0%st</div><div class="line">Mem:   4194304k total,  4179548k used,    14756k free,        0k buffers</div><div class="line">Swap:  2097152k total,   782360k used,  1314792k free,  1977088k cached</div><div class="line"></div><div class="line">PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND</div><div class="line">1033 mysql     20   0 1158m 7988 1620 S  0.3  0.2  30:16.67 /usr/libexec/mysqld --basedi</div><div class="line">7134 tyhall    20   0 1605m 167m  15m S  0.3  4.1   0:29.42 pypy run.py UT001 192.168.10</div><div class="line">7136 tyhall    20   0  347m 166m  17m S  0.3  4.1   0:24.37 pypy run.py GT21-001-998-1 1</div><div class="line"></div><div class="line">17:48:50 ： 系统当前时间</div><div class="line">151 days, 3:31 ： 系统开机到现在经过了多少时间</div><div class="line">1 users ： 当前2用户在线</div><div class="line">load average: 0.07, 0.12, 0.09： 系统1分钟、5分钟、15分钟的CPU负载信息</div><div class="line"></div><div class="line">Tasks：任务;</div><div class="line">132 total：当前有132个进程。</div><div class="line">1 running：1个进程正在运行</div><div class="line">131 sleeping：131个进程睡眠</div><div class="line">0 stopped：停止的进程数</div><div class="line">0 zombie：僵死的进程数</div><div class="line"></div><div class="line">Cpu(s)：表示这一行显示CPU总体信息</div><div class="line">1.0%us：用户态进程占用CPU时间百分比，不包含renice值为负的任务占用的CPU的时间。</div><div class="line">0.5%sy：内核占用CPU时间百分比</div><div class="line">0.2%ni：改变过优先级的进程占用CPU的百分比</div><div class="line">98.3%id：空闲CPU时间百分比</div><div class="line">0.0%wa：等待I/O的CPU时间百分比</div><div class="line">0.0%hi：CPU硬中断时间百分比</div><div class="line">0.0%si：CPU软中断时间百分比</div><div class="line">注：这里显示数据是所有cpu的平均值，如果想看每一个cpu的处理情况，按1即可；折叠，再次按1；(centos)</div><div class="line"></div><div class="line">Mem：内存</div><div class="line">4194304k total：物理内存总量</div><div class="line">4179548k used：使用的物理内存量</div><div class="line">14756k free：空闲的物理内存量</div><div class="line">0k buffers：用作内核缓存的物理内存量</div><div class="line"></div><div class="line">Swap：交换空间</div><div class="line">2097152k total：交换区总量</div><div class="line">782360k used：使用的交换区量</div><div class="line">1314792k free：空闲的交换区量</div><div class="line">1977088k cached：缓冲交换区总量</div><div class="line"></div><div class="line">PID：进程的ID</div><div class="line">USER：进程所有者</div><div class="line">PR：进程的优先级别，越小越优先被执行</div><div class="line">NI：值Nice Value 如果为负值，则有较高优先级；如果为正值则为较低优先级；如果为0，则无优先级调整</div><div class="line">VIRT：进程占用的虚拟内存</div><div class="line">RES：进程占用的物理内存</div><div class="line">SHR：进程使用的共享内存</div><div class="line">S：进程的状态。S表示休眠，R表示正在运行，Z表示僵死状态，N表示该进程优先值为负数</div><div class="line">%CPU：进程占用CPU的使用率</div><div class="line">%MEM：进程使用的物理内存和总内存的百分比</div><div class="line">TIME+：该进程启动后占用的总的CPU时间，即占用CPU使用时间的累加值。</div><div class="line">COMMAND：进程启动命令名称</div><div class="line"></div><div class="line">q：退出top命令</div><div class="line">&lt;Space&gt;：立即刷新</div><div class="line">s：设置刷新时间间隔</div><div class="line">c：显示命令完全模式</div><div class="line">t: 显示或隐藏进程和CPU状态信息</div><div class="line">m：显示或隐藏内存状态信息</div><div class="line">l：显示或隐藏uptime信息</div><div class="line">f：增加或减少进程显示标志</div><div class="line">S：累计模式，会把已完成或退出的子进程占用的CPU时间累计到父进程的MITE+</div><div class="line">P：按%CPU使用率排行</div><div class="line">T：按MITE+排行</div><div class="line">M：按%MEM排行</div><div class="line">u：指定显示用户进程</div><div class="line">r：修改进程renice值</div><div class="line">k: <span class="built_in">kill</span>进程</div><div class="line">i：只显示正在运行的进程</div><div class="line">W：保存对top的设置到文件^/.toprc，下次启动将自动调用toprc文件的设置。</div><div class="line">h：帮助命令。</div><div class="line">q：退出</div><div class="line"></div><div class="line">如果只需要查看内存：可用free命令。只查看uptime信息（第一行），可用uptime命令；</div></pre></td></tr></table></figure>
 
           
         
