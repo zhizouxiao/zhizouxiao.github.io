@@ -1099,148 +1099,6 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://zhizouxiao.github.io/2016/12/16/linux-network-commond/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Eli Wang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/logo.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Eli's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/16/linux-network-commond/" itemprop="url">
-                  (linux网络)netstat
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-16T00:00:00+08:00">
-                2016-12-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-            <!--noindex-->
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/12/16/linux-network-commond/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2016/12/16/linux-network-commond/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-              <!--/noindex-->
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="netstat"><a href="#netstat" class="headerlink" title="netstat"></a>netstat</h4><p>netstat 用于列出所有tcp，udp连接</p>
-<ol>
-<li><p>显示当前所有活动的网络连接<br> ~ » netstat -an | head -n 10                                                    wazi@eli<br> Active Internet connections (including servers)<br> Proto Recv-Q Send-Q  Local Address          Foreign Address        (state)<br> tcp4       0      0  172.16.13.172.54304    180.149.131.55.8843    SYN_SENT<br> tcp4       0      0  172.16.13.172.54303    45.32.41.155.44005     ESTABLISHED<br> tcp4       0      0  127.0.0.1.60409        127.0.0.1.54302        ESTABLISHED<br> tcp4       0      0  127.0.0.1.54302        127.0.0.1.60409        ESTABLISHED<br> tcp4       0      0  172.16.13.172.54300    45.32.41.155.44005     ESTABLISHED<br> tcp4       0      0  127.0.0.1.60409        127.0.0.1.54299        ESTABLISHED<br> tcp4       0      0  127.0.0.1.54299        127.0.0.1.60409        ESTABLISHED<br> tcp4       0      0  172.16.13.172.54296    111.203.187.167.3306   ESTABLISHED  </p>
-<p> 连接状态：<br> LISTEN：侦听来自远方的TCP端口的连接请求<br> SYN-SENT：再发送连接请求后等待匹配的连接请求<br> SYN-RECEIVED：再收到和发送一个连接请求后等待对方对连接请求的确认<br> ESTABLISHED：代表一个打开的连接<br> FIN-WAIT-1：等待远程TCP连接中断请求，或先前的连接中断请求的确认<br> FIN-WAIT-2：从远程TCP等待连接中断请求<br> CLOSE-WAIT：等待从本地用户发来的连接中断请求<br> CLOSING：等待远程TCP对连接中断的确认<br> LAST-ACK：等待原来的发向远程TCP的连接中断请求的确认<br> TIME-WAIT：等待足够的时间以确保远程TCP接收到连接中断请求的确认<br> CLOSED：没有任何连接状态  </p>
-</li>
-<li><p>显示所有连接ip<br>netstat -n -p | grep ES | awk ‘{print $5}’ | awk -F: ‘{print $1}’</p>
-</li>
-<li><p>显示数量<br>netstat -anp |grep ‘tcp|udp’ | awk ‘{print $5}’ | cut -d: -f1 | sort | uniq -d</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://zhizouxiao.github.io/2016/12/16/linux-iostat-commond/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1369,6 +1227,148 @@
 <p>形象的比喻：<br>r/s+w/s 类似于交款人的总数<br>平均队列长度(avgqu-sz)类似于单位时间里平均排队人的个数<br>平均服务时间(svctm)类似于收银员的收款速度<br>平均等待时间(await)类似于平均每人的等待时间<br>平均I/O数据(avgrq-sz)类似于平均每人所买的东西多少<br>I/O 操作率 (%util)类似于收款台前有人排队的时间比例<br>设备IO操作:总IO(io)/s = r/s(读) +w/s(写)</p>
 <p>平均等待时间=单个I/O服务器时间*(1+2+…+请求总数-1)/请求总数</p>
 <p>每秒发出的I/0请求很多,但是平均队列就4,表示这些请求比较均匀,大部分处理还是比较及时。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zhizouxiao.github.io/2016/12/16/linux-network-commond/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Eli Wang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/logo.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eli's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/16/linux-network-commond/" itemprop="url">
+                  (linux网络)netstat
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-16T00:00:00+08:00">
+                2016-12-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/12/16/linux-network-commond/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2016/12/16/linux-network-commond/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="netstat"><a href="#netstat" class="headerlink" title="netstat"></a>netstat</h4><p>netstat 用于列出所有tcp，udp连接</p>
+<ol>
+<li><p>显示当前所有活动的网络连接<br> ~ » netstat -an | head -n 10                                                    wazi@eli<br> Active Internet connections (including servers)<br> Proto Recv-Q Send-Q  Local Address          Foreign Address        (state)<br> tcp4       0      0  172.16.13.172.54304    180.149.131.55.8843    SYN_SENT<br> tcp4       0      0  172.16.13.172.54303    45.32.41.155.44005     ESTABLISHED<br> tcp4       0      0  127.0.0.1.60409        127.0.0.1.54302        ESTABLISHED<br> tcp4       0      0  127.0.0.1.54302        127.0.0.1.60409        ESTABLISHED<br> tcp4       0      0  172.16.13.172.54300    45.32.41.155.44005     ESTABLISHED<br> tcp4       0      0  127.0.0.1.60409        127.0.0.1.54299        ESTABLISHED<br> tcp4       0      0  127.0.0.1.54299        127.0.0.1.60409        ESTABLISHED<br> tcp4       0      0  172.16.13.172.54296    111.203.187.167.3306   ESTABLISHED  </p>
+<p> 连接状态：<br> LISTEN：侦听来自远方的TCP端口的连接请求<br> SYN-SENT：再发送连接请求后等待匹配的连接请求<br> SYN-RECEIVED：再收到和发送一个连接请求后等待对方对连接请求的确认<br> ESTABLISHED：代表一个打开的连接<br> FIN-WAIT-1：等待远程TCP连接中断请求，或先前的连接中断请求的确认<br> FIN-WAIT-2：从远程TCP等待连接中断请求<br> CLOSE-WAIT：等待从本地用户发来的连接中断请求<br> CLOSING：等待远程TCP对连接中断的确认<br> LAST-ACK：等待原来的发向远程TCP的连接中断请求的确认<br> TIME-WAIT：等待足够的时间以确保远程TCP接收到连接中断请求的确认<br> CLOSED：没有任何连接状态  </p>
+</li>
+<li><p>显示所有连接ip<br>netstat -n -p | grep ES | awk ‘{print $5}’ | awk -F: ‘{print $1}’</p>
+</li>
+<li><p>显示数量<br>netstat -anp |grep ‘tcp|udp’ | awk ‘{print $5}’ | cut -d: -f1 | sort | uniq -d</p>
+</li>
+</ol>
 
           
         
