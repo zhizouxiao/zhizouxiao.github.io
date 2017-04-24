@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+    
+    <entry>
+      <title><![CDATA[tool-tmux]]></title>
+      <url>%2F2017%2F04%2F22%2Ftool-tmux%2F</url>
+      <content type="text"><![CDATA[session 管理1234567891011121314151617181920211. 新建session tmux new -s session_name 2. 进入session tmux attach -t session_name 3. 切换sessiontmux switch -t session_name4. 列出所有session tmux list-sessions 5. 离开sessiontmux detach (prefix + d)6. 关闭sessiontmux kill-session -t session_name window管理123456781. 新建window tmux new-window (prefix + c)2. 切换windowtmux select-window -t :0-9 (prefix + 0-9)3. 重命名windowtmux rename-window (prefix + ,) pane 管理12345678910111213141516171. 垂直拆分tmux split-window (prefix + &quot;)2. 水平拆分tmux split-window -h (prefix + %)3. 交换tmux swap-pane -[UDLR] (prefix + &#123; or &#125;)4. 选择tmux select-pane -[UDLR]（prefix + [arrow]）5. 最大化当前窗口/还原tmux resize-pane (prefix + z)6. 关闭最大窗口tmux close-pane (prefix + x) 其他1234567891. 加载配置文件tmux source-file .tmux.conf2. 复制 .tmux.confbind [ copy-modebind-key -t vi-copy &apos;v&apos; begin-selection # Begin selection in copy mode.bind-key -t vi-copy &apos;V&apos; rectangle-toggle # Begin selection in copy mode.bind-key -t vi-copy &apos;y&apos; copy-selection # Yank selection in copy mode.bind ] paste-buffer]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[linux 相关]]></title>
+      <url>%2F2017%2F04%2F08%2Flinux-related-note%2F</url>
+      <content type="text"><![CDATA[不打印日志12scp file eli@192.168.0.xx &gt; /dev/null 2&gt;&amp;1# 2&gt;&amp;1 出错日志和输出日志]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[书 《the start-up of you》]]></title>
+      <url>%2F2017%2F04%2F06%2Fbook-the-start-up-of-you%2F</url>
+      <content type="text"><![CDATA[the start-up of you 随着社会变化的加快，工作变为短期合同，为了适应变化，书中推荐普通人也要像企业家一样来对待自己的职业生涯。对我以后的职业有指导意义。 Make a list of your key uncertainties, doubts, and questions you have about your career at the present moment. Make a list of the hypotheses you’re develop. Write out your current Plan A and Plan Z, and jot some notes about what possible Plan B moves might be in your current situation. Make a plan to develop more transferable skills, those skills and experiences that are broadly useful to potential other jobs. Writing skills, general management experience, technical and computer skills, people smarts, and international experience or language skills are examples of skills with high option value—that is, they are transferable to a wide range of possible Plan B’s. Begin on an experimental side project that you work on during some nights and weekends. Orient it around a skill or experience that is different but related—something that either enhances what you do now or can serve as a possible Plan B if your Plan A doesn’t work out. Ideally, collaborate on this project with someone else in your network. Establish an identity independent of your employer, city, industry. Reserve a personal domain name (yourname.com). Print up a second set of business cards with just your name on it and a personal email address. Reach out to five people who work in adjacent niches and ask them to coffee. Compare your plans with theirs. Keep up these relationships over time so you can access diverse information and so you’re in a better position to potentially pivot to those niches when necessary. World-class professionals build networks to help them navigate the world. No matter how brilliant your mind or strategy, if you’re playing a solo game, you’ll always lose out to a team. In alliances, resources and assistance flow both ways. The fastest way to change yourself is to hang out with people who are already the way you want to be. While most people have a small circle of close friends, they maintain a large circle of these valued acquaintances and colleagues. Relationship builders prioritize high-quality relationships over a large number of connections. The first is professional allies. Who would be in your corner in a conflict or when you come under stress? Whom do you invite to dinner to brainstorm career options? Whom do you trust and proactively try to work with if you can? From whom do you solicit feedback on key projects? Whom do you review life goals and plans with? These are your allies. Many people can maintain at most eight to ten strong professional alliances at any given point in time. The Strength of Weak Ties: The friends you don’t know very well are the ones who refer winning jobs. Weak ties can uniquely serve as bridges to other worlds and thus can pass on information or opportunities you have not heard about. Here we want to explore how opportunities flow through congregations of these people. Those with good ideas and information tend to hang out with one another. You will get ahead if you can tap the circles that dish the best opportunities. It’s how people have gotten ahead for centuries. 1)Overall, it’s probably not as risky as you think. 2)Is the worst-case scenario tolerable or intolerable? 3)Can you change or reverse the decision midway through? Is Plan B doable? Remember: If you don’t find risk, risk will find you. Who You Know Is What You Know. Remember Iwe: an individual’s power is raised exponentially with the help of a network.]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[书《细雪》]]></title>
+      <url>%2F2017%2F04%2F06%2Fbook-xixue%2F</url>
+      <content type="text"><![CDATA[细雪 有助于了解抗战时期，日本上层社会的状态。 类似红楼梦，有助于了解日本文化。在家族、阶级观念、文化修养等方面与中国文化神似，但在接受西方外来事物上，日本文化保持着迥然不同的开放态度。 我一见那花，就像被它吸了进去似的。 丹生夫人平常和幸子总说大阪话，今天也许是为了做陪客吧，竟然满口东京话，仿佛变成了另外一个人，简直无法说一句知心话了。 遗产 可是鹤子由于很早就主持家务，根本没有空闲时间去旅行。再说她觉得哪里都比不上大阪，看戏可以看雁治郎，上馆子可以去播半或鹤屋，对她来说，这就心满意足了，不愿意去陌生的地方。 大家一致同意。吃完晚饭，贞之助、幸子、悦子和妙子都聚集在供着赏月果品的那间日本式屋子的廊檐下，让阿春磨墨，摊开卷纸，贞之助写了一首和歌，幸子和悦子每人写一首俳句，妙子在这方面不擅长，她就画了一幅松林悬月的水墨写生画。 尽管有一个时期他不愿意让雪子回来，但现在反倒有点内疚了。因此他无微不至地吩咐女佣准备好洗澡水，让雪子一到家就能入浴；又说晚饭一定在火车上吃过了，不过临睡前还得吃点东西，叫人取出两三瓶雪子喜欢的白葡萄酒，亲手抹去瓶子上的尘埃，查看出厂的年代。 和呆在大阪的时候不一样了，无论做什么，没有人批评指摘，她爱怎样就怎样，轻松愉快得很。再说东京这个地方尊重女子的个性，不受社会风气的拘束，比如穿衣服吧，可以挑自己合适的穿，这些都比大阪好。 现在想起来，一个月以前这个妹妹打扮出这样一副意态可嘉的模样而且拍了这样的照片，似乎并非偶然，几乎带点不祥的兆头。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[读书 2017]]></title>
+      <url>%2F2017%2F04%2F06%2Fbooks-I-have-read%2F</url>
+      <content type="text"><![CDATA[2017-03-15 细雪 2017-04-06 the start-up of you]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[(linux网络)tc]]></title>
+      <url>%2F2016%2F12%2F21%2Flinux-network-tc-commond%2F</url>
+      <content type="text"><![CDATA[tctc 网络状况 增加延迟100ms ± 10mstc qdisc change dev eth0 root netem delay 100ms 10ms 增加延迟100ms ± 10ms, 下一个随机数25%依赖于上一个tc qdisc change dev eth0 root netem delay 100ms 10ms 25% 随机丢包0.1%tc qdisc change dev eth0 root netem loss 0.1%]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[(linux网络)netstat]]></title>
+      <url>%2F2016%2F12%2F16%2Flinux-network-commond%2F</url>
+      <content type="text"><![CDATA[netstatnetstat 用于列出所有tcp，udp连接 显示当前所有活动的网络连接 ~ » netstat -an | head -n 10 wazi@eli Active Internet connections (including servers) Proto Recv-Q Send-Q Local Address Foreign Address (state) tcp4 0 0 172.16.13.172.54304 180.149.131.55.8843 SYN_SENT tcp4 0 0 172.16.13.172.54303 45.32.41.155.44005 ESTABLISHED tcp4 0 0 127.0.0.1.60409 127.0.0.1.54302 ESTABLISHED tcp4 0 0 127.0.0.1.54302 127.0.0.1.60409 ESTABLISHED tcp4 0 0 172.16.13.172.54300 45.32.41.155.44005 ESTABLISHED tcp4 0 0 127.0.0.1.60409 127.0.0.1.54299 ESTABLISHED tcp4 0 0 127.0.0.1.54299 127.0.0.1.60409 ESTABLISHED tcp4 0 0 172.16.13.172.54296 111.203.187.167.3306 ESTABLISHED 连接状态： LISTEN：侦听来自远方的TCP端口的连接请求 SYN-SENT：再发送连接请求后等待匹配的连接请求 SYN-RECEIVED：再收到和发送一个连接请求后等待对方对连接请求的确认 ESTABLISHED：代表一个打开的连接 FIN-WAIT-1：等待远程TCP连接中断请求，或先前的连接中断请求的确认 FIN-WAIT-2：从远程TCP等待连接中断请求 CLOSE-WAIT：等待从本地用户发来的连接中断请求 CLOSING：等待远程TCP对连接中断的确认 LAST-ACK：等待原来的发向远程TCP的连接中断请求的确认 TIME-WAIT：等待足够的时间以确保远程TCP接收到连接中断请求的确认 CLOSED：没有任何连接状态 显示所有连接ipnetstat -n -p | grep ES | awk ‘{print $5}’ | awk -F: ‘{print $1}’ 显示数量netstat -anp |grep ‘tcp|udp’ | awk ‘{print $5}’ | cut -d: -f1 | sort | uniq -d]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[(linux常用命令)iostat]]></title>
+      <url>%2F2016%2F12%2F16%2Flinux-iostat-commond%2F</url>
+      <content type="text"><![CDATA[CPUiostatavg-cpu: %user %nice %system %iowait %steal %idle 1.95 0.06 0.41 0.03 0.00 97.56cpu属性值说明：%user：CPU处在用户模式下的时间百分比。%nice：CPU处在带NICE值的用户模式下的时间百分比。%system：CPU处在系统模式下的时间百分比。%iowait：CPU等待输入输出完成时间的百分比。%steal：管理程序维护另一个虚拟处理器时，虚拟CPU的无意识等待时间百分比。%idle：CPU空闲时间百分比。 注： 如果%iowait的值过高，表示硬盘存在 I/O瓶颈， %idle值高，表示CPU较空闲，如果%idle值高但系统响应慢时，有可能是CPU等待分配内存，此时应加大内存容量。 %idle值如果持续低于10，那么系统的CPU处理能力相对较低，表明系统中最需要解决的资源是CPU。 Diskiostat -d -x -k 1 1 Device: rrqm/s wrqm/s r/s w/s rkB/s wkB/s avgrq-sz avgqu-sz await r_await w_await svctm %utilvda 0.00 7.38 0.04 4.60 0.73 63.26 27.59 0.06 12.58 19.94 12.53 6.63 3.07vdb 0.00 6.97 0.21 6.14 6.30 180.95 58.99 0.07 11.59 4.15 11.85 0.61 0.39rrqm/s: 每秒进行 merge 的读操作数目。即 rmerge/swrqm/s: 每秒进行 merge 的写操作数目。即 wmerge/sr/s: 每秒完成的读 I/O 设备次数。即 rio/sw/s: 每秒完成的写 I/O 设备次数。即 wio/srsec/s: 每秒读扇区数。即 rsect/swsec/s: 每秒写扇区数。即 wsect/srkB/s: 每秒读K字节数。是 rsect/s 的一半，因为每扇区大小为512字节。wkB/s: 每秒写K字节数。是 wsect/s 的一半。avgrq-sz: 平均每次设备I/O操作的数据大小 (扇区)。avgqu-sz: 平均I/O队列长度。await: 平均每次设备I/O操作的等待时间 (毫秒)。svctm: 平均每次设备I/O操作的服务时间 (毫秒)。%util: 一秒中有百分之多少的时间用于 I/O 操作，即被io消耗的cpu百分比 备注：如果 %util 接近 100%，说明产生的I/O请求太多，I/O系统已经满负荷，该磁盘可能存在瓶颈。如果 svctm 比较接近 await，说明 I/O 几乎没有等待时间；如果 await 远大于 svctm，说明I/O 队列太长，io响应太慢，则需要进行必要优化。如果avgqu-sz比较大，也表示有当量io在等待。如果 %util 接近 100%，说明产生的I/O请求太多，I/O系统已经满负荷，该磁盘可能存在瓶颈。 idle小于70% IO压力就较大了，一般读取速度有较多的wait。 同时可以结合vmstat 查看查看b参数(等待资源的进程数)和wa参数(IO等待所占用的CPU时间的百分比，高过30%时IO压力高)。 另外 await 的参数也要多和 svctm 来参考。差的过高就一定有 IO 的问题。 avgqu-sz 也是个做 IO 调优时需要注意的地方，这个就是直接每次操作的数据的大小，如果次数多，但数据拿的小的话，其实 IO 也会很小。如果数据拿的大，才IO 的数据会高。也可以通过 avgqu-sz × ( r/s or w/s ) = rsec/s or wsec/s。也就是讲，读定速度是这个来决定的。 svctm 一般要小于 await (因为同时等待的请求的等待时间被重复计算了)，svctm 的大小一般和磁盘性能有关，CPU/内存的负荷也会对其有影响，请求过多也会间接导致 svctm 的增加。await 的大小一般取决于服务时间(svctm) 以及 I/O 队列的长度和 I/O 请求的发出模式。如果 svctm 比较接近 await，说明 I/O 几乎没有等待时间；如果 await 远大于 svctm，说明 I/O 队列太长，应用得到的响应时间变慢，如果响应时间超过了用户可以容许的范围，这时可以考虑更换更快的磁盘，调整内核 elevator 算法，优化应用，或者升级 CPU。 队列长度(avgqu-sz)也可作为衡量系统 I/O 负荷的指标，但由于 avgqu-sz 是按照单位时间的平均值，所以不能反映瞬间的 I/O 洪水。 形象的比喻：r/s+w/s 类似于交款人的总数平均队列长度(avgqu-sz)类似于单位时间里平均排队人的个数平均服务时间(svctm)类似于收银员的收款速度平均等待时间(await)类似于平均每人的等待时间平均I/O数据(avgrq-sz)类似于平均每人所买的东西多少I/O 操作率 (%util)类似于收款台前有人排队的时间比例设备IO操作:总IO(io)/s = r/s(读) +w/s(写) 平均等待时间=单个I/O服务器时间*(1+2+…+请求总数-1)/请求总数 每秒发出的I/0请求很多,但是平均队列就4,表示这些请求比较均匀,大部分处理还是比较及时。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[(linux常用命令)top]]></title>
+      <url>%2F2016%2F12%2F10%2Flinux-top-commond%2F</url>
+      <content type="text"><![CDATA[top 命令123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081top -ctop - 17:48:50 up 151 days, 3:31, 1 user, load average: 0.07, 0.12, 0.09Tasks: 132 total, 1 running, 131 sleeping, 0 stopped, 0 zombieCpu(s): 1.0%us, 0.5%sy, 0.2%ni, 98.3%id, 0.0%wa, 0.0%hi, 0.0%si, 0.0%stMem: 4194304k total, 4179548k used, 14756k free, 0k buffersSwap: 2097152k total, 782360k used, 1314792k free, 1977088k cachedPID USER PR NI VIRT RES SHR S %CPU %MEM TIME+ COMMAND1033 mysql 20 0 1158m 7988 1620 S 0.3 0.2 30:16.67 /usr/libexec/mysqld --basedi7134 tyhall 20 0 1605m 167m 15m S 0.3 4.1 0:29.42 pypy run.py UT001 192.168.107136 tyhall 20 0 347m 166m 17m S 0.3 4.1 0:24.37 pypy run.py GT21-001-998-1 117:48:50 ： 系统当前时间151 days, 3:31 ： 系统开机到现在经过了多少时间1 users ： 当前2用户在线load average: 0.07, 0.12, 0.09： 系统1分钟、5分钟、15分钟的CPU负载信息Tasks：任务;132 total：当前有132个进程。1 running：1个进程正在运行131 sleeping：131个进程睡眠0 stopped：停止的进程数0 zombie：僵死的进程数Cpu(s)：表示这一行显示CPU总体信息1.0%us：用户态进程占用CPU时间百分比，不包含renice值为负的任务占用的CPU的时间。0.5%sy：内核占用CPU时间百分比0.2%ni：改变过优先级的进程占用CPU的百分比98.3%id：空闲CPU时间百分比0.0%wa：等待I/O的CPU时间百分比0.0%hi：CPU硬中断时间百分比0.0%si：CPU软中断时间百分比注：这里显示数据是所有cpu的平均值，如果想看每一个cpu的处理情况，按1即可；折叠，再次按1；(centos)Mem：内存4194304k total：物理内存总量4179548k used：使用的物理内存量14756k free：空闲的物理内存量0k buffers：用作内核缓存的物理内存量Swap：交换空间2097152k total：交换区总量782360k used：使用的交换区量1314792k free：空闲的交换区量1977088k cached：缓冲交换区总量PID：进程的IDUSER：进程所有者PR：进程的优先级别，越小越优先被执行NI：值Nice Value 如果为负值，则有较高优先级；如果为正值则为较低优先级；如果为0，则无优先级调整VIRT：进程占用的虚拟内存RES：进程占用的物理内存SHR：进程使用的共享内存S：进程的状态。S表示休眠，R表示正在运行，Z表示僵死状态，N表示该进程优先值为负数%CPU：进程占用CPU的使用率%MEM：进程使用的物理内存和总内存的百分比TIME+：该进程启动后占用的总的CPU时间，即占用CPU使用时间的累加值。COMMAND：进程启动命令名称q：退出top命令&lt;Space&gt;：立即刷新s：设置刷新时间间隔c：显示命令完全模式t: 显示或隐藏进程和CPU状态信息m：显示或隐藏内存状态信息l：显示或隐藏uptime信息f：增加或减少进程显示标志S：累计模式，会把已完成或退出的子进程占用的CPU时间累计到父进程的MITE+P：按%CPU使用率排行T：按MITE+排行M：按%MEM排行u：指定显示用户进程r：修改进程renice值k: kill进程i：只显示正在运行的进程W：保存对top的设置到文件^/.toprc，下次启动将自动调用toprc文件的设置。h：帮助命令。q：退出如果只需要查看内存：可用free命令。只查看uptime信息（第一行），可用uptime命令；]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[(linux常用命令)内存]]></title>
+      <url>%2F2016%2F12%2F10%2Flinux-memory-commond%2F</url>
+      <content type="text"><![CDATA[free 命令1234567891011free -h total used free shared buffers cachedMem: 4.0G 2.6G 1.4G 5.0M 0B 426M-/+ buffers/cache: 2.2G 1.8GSwap: 2.0G 766M 1.3Gbuffer：将要写到磁盘上的内容cached: 缓存到内存，供以后使用的数据2.2G: used(2.6G) - buffer(0B) - cached(426M) 1.8G: used(1.4G) + buffer(0B) + cached(426M) vmstat 命令12345678910111213141516171819202122232425262728293031323334shell: vmstat -S m 1 3procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu----- r b swpd free buff cache si so bi bo in cs us sy id wa st 2 0 0 314 323 14996 0 0 1 25 1 5 1 1 98 0 0 0 0 0 314 323 14996 0 0 0 164 1236 2243 3 1 95 1 0 0 0 0 312 323 14996 0 0 0 72 1233 2324 3 1 95 0 0Procs（进程）:r: 运行队列中进程数量b: 等待IO的进程数量Memory（内存）:swpd: 使用虚拟内存大小free: 可用内存大小buff: 用作缓冲的内存大小cache: 用作缓存的内存大小Swap:si: 每秒从交换区写到内存的大小so: 每秒写入交换区的内存大小IO：（现在的Linux版本块的大小为1024bytes）bi: 每秒读取的块数bo: 每秒写入的块数system：in: 每秒中断数，包括时钟中断cs: 每秒上下文切换数CPU（以百分比表示）us: 用户进程执行时间(user time)sy: 系统进程执行时间(system time)id: 空闲时间(包括IO等待时间)wa: 等待IO时间]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[(linux常用命令)进程]]></title>
+      <url>%2F2016%2F12%2F02%2Flinux-ps-commond%2F</url>
+      <content type="text"><![CDATA[ps 命令1234567891011121314151617181920# 显示所有进程ps -efps aux#u,f 表示显示详细信息#显示某用户进程 -ups -f -u username#根据进程id显示进程信息ps -f -p 3150,7298,6544# 显示树型进程, --forestps -f --forest -C pypy# -C 进程名称# 显示子进程ps -o pid,uname,comm -C apache2#选择显示列 -o]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[(linux常用命令)文件与目录]]></title>
+      <url>%2F2016%2F11%2F29%2Flinux-file-commond%2F</url>
+      <content type="text"><![CDATA[文件操作1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556# 查看当前目录下文件个数find ./ | wc -l# 查找目标文件夹中是否有obj文件:$find ./ -name '*.o'# 查找并删除.svnfind . -name ".svn" | xargs rm -Rf# ls按照时间排序ls -lrt# 拆分文件 splitsplit -l 100 myfile prefix #按行拆分split -b 100k myfile prefix #按大小拆分##### 文件浏览# 倒序输出 tactac myfile# 显示文件前几行head -10 filename# 显示文件后几行tail -10 filename#### 文件与目录权限# 改变文件的拥有者chown user:user file# 递归子目录修改 chown -R user source/# 改变文件读，写，执行等属性chmod 600 id_rsa# 增加脚本可执行权限chmod a+x myscript##### tar压缩与解压缩# .tartar -cvf tecmint-14-09-12.tar /home/tecmint/tar -xvf tecmint-14-09-12.tar /home/tecmint/# .tar.gztar cvzf MyImages-14-09-12.tar.gz /home/MyImagestar xvzf MyImages-14-09-12.tar.gz /home/MyImages# .tar.bz2tar cvjf MyImages-14-09-12.tar.gz /home/MyImagestar xvjf MyImages-14-09-12.tar.gz /home/MyImages]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[要架构师干什么？(译)]]></title>
+      <url>%2F2016%2F10%2F18%2Fwho-need-architects%2F</url>
+      <content type="text"><![CDATA[原文链接：http://www.yusufaytas.com/who-needs-architect/ 架构师？根据维基百科，架构师指的是计划，设计和监督建筑的构造。因此，很明显我们可以看出架构师这个角色取自土木工程。对应的，我们得到了软件架构。软件架构指的是软件系统的高层结构。正如你可能猜到的，我不认为我们需要一个正式的架构师角色，而是需要软件架构。在开始另一次争吵之前，让我们先看一下矩阵架构场景。 很酷吧？这对于每一个构建软件的人来说都是应得的。就是这样。我认为任何工作的软件都有一种架构。哇，那每个人都是架构师了？其实，也对也不对。对的方面是，一个架构需要架构师（们）。不对的地方是，我不认为没有必要定义一个正式的角色，把每个人都叫做架构师。 回到土木工程。一个架构师设计一个建筑，考虑的是美观，艺术性和构造的外形。一个土木工程师则专注于设计的每个元素，是架构的实践者。就这样，没有更多的定义。正如你所看到的，这些是定义明确的角色，它们有一种分层的感觉。当开发软件时，你认为我们有或应该有这种分层吗？不。当然一个有经验的工程师与一个刚毕业的有不同的观点。然而这两种工程师同样地影响着软件系统和架构。如果把一个叫做架构师而另外一个不是，你认为这样公平吗？不！因此，一个正式的架构师职位并不适合软件开发领域。 如果你认为我们只需要软件“软件架构”这个职称来强调其资历水平，我不同意。大多数大公司有着很好的开发路径。差不多是软件工程师1-&gt;软件工程师2-&gt;资深软件工程师-&gt;核心工程师。让我强调一下，他们不需要一个架构师。 一些问题和解答： 如果把核心工程师当作架构师。我们需要总工程师来评价我们构建的每个软件吗？简单的讲不。因为他们在构建自己的项目。 在客户和团队之间，我们真的需要一个代理吗？为什么我们不能都与客户坐在一起，来共同做决定？我认为应该整个团队一起来理解繁乱的需求并从中提出具体任务。当然，有时需要一些有经验的人，领导其他成员。但是我们不必叫他们架构师。他们只是经验丰富的开发人员。 在一个没有架构师的团队里，人们就不能写整洁，高质量的代码了吗？系统设计的阶段就可以去掉？我认为一个好的团队应该先做设计审查，然后代码审查，来分享知识，提高代码质量，倾听不同的意见。如果能很好的沟通交流，开发人员根据能力水平分配任务，那么就可以交付高质量的软件，即使没有一个正式的架构师角色。 我们真的需要一个架构师来领导和制定策略吗？难道不是项目经理来领导团队并决定策略？我认为由于这两个方面的原因，才有了项目经理这个职位。那么技术领导呢？由于软件开发像手工艺，工匠（高级工程师）应该分享如何开发高水平的软件。因此，我们不需要一个正式的架构师角色。 总的来说，我不认为我们需要为设计架构分离出一个专门的角色。我认为团队中的每个成员都应该参与架构讨论，由团队共同完成整个设计。而且，架构师并不需要对应于开发经验水平。最后，再见架构师，让我们专心于架构本身。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[linux常用命令]]></title>
+      <url>%2F2016%2F10%2F17%2Flinux-commond%2F</url>
+      <content type="text"><![CDATA[文件操作123# 拆分文件 splitsplit -l 100 myfile prefix #按行拆分split -b 100k myfile prefix #按大小拆分 文件浏览12# 倒序输出 tactac myfile tar压缩与解压缩123456789# .tartar -cvf tecmint-14-09-12.tar /home/tecmint/tar -xvf tecmint-14-09-12.tar /home/tecmint/# .tar.gztar cvzf MyImages-14-09-12.tar.gz /home/MyImagestar xvzf MyImages-14-09-12.tar.gz /home/MyImages# .tar.bz2tar cvjf MyImages-14-09-12.tar.gz /home/MyImagestar xvjf MyImages-14-09-12.tar.gz /home/MyImages 查找不包含的文件1find . ! -name "*.2017_04_24" -type f]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[理解ssh加密和连接流程(译)]]></title>
+      <url>%2F2016%2F10%2F07%2Funderstanding-ssh%2F</url>
+      <content type="text"><![CDATA[简介SSH全称secure shell，是管理远程服务器最常用的方法。通过使用一系列的加密技术，SSH 提供了这样一个机制：建立安全加密连接，互相授权，发送命令和返回输出结果。在其他文章中，我们讨论过了如何配置ssh访问，如何使用ssh连接，和一些ssh建议和技巧。在本文，我们将介绍SSH的底层加密技术和建立加密连接的方法。这对于理解多个加密层以及建立连接，相互授权的步骤是非常有用的。 对称加密，非对称加密和哈希为了安全的传输信息，SSH在传输过程中的不同阶段，采用不同类型的控制技术。这些技术包括对称加密，非对称加密和哈希。 对称加密 加密和解密组件的关系决定了一个加密技术是对称的还是非对称的。 对称加密指的是一个密钥既可以用来加密消息，也可以用来解密消息。这意味着通信双方都持有相同的密钥，既可以加密又可以解密。这种加密方式又叫做“共享加密”或“密钥加密”。典型的是只有一个密钥或者一对关系紧密的密钥（获得另一个密钥并不重要）。 在SSH中，对称加密用于加密整个连接。与一些用户猜想的不同，公／私非对称密钥只用来授权。对称加密也用于密码授权。 客户端和服务器一起生成密钥，生成的密钥不会被第三方知道。密钥是通过一个叫做密钥交换算法生成的。交换的结果是服务器和客户端双方获得相同的密钥。这个流程将在后面详细介绍。 对称加密密钥的生成是基于session的，并建立了实际传输数据的加密。一旦密钥建立所有数据必须通过共享密钥加密。这是在授权客户端之前完成的。 SSH可配置使用多种不同的对称加密系统，包括AES，Blowfish，3DES，CAST128，和Arcfour。客户端和服务器都有一个算法列表，根据优先级来决定使用哪种加密算法。客户端列表中的第一选择，如果服务器也支持，这个算法将被采用。 在Ubuntu 14.04，客户端和服务器的默认算法列表均为:aes128-ctr, aes192-ctr, aes256-ctr, arcfour256, arcfour128, aes128-gcm@openssh.com, aes256-gcm@openssh.com, chacha20-poly1305@openssh.com, aes128-cbc, blowfish-cbc, cast128-cbc, aes192-cbc, aes256-cbc, arcfour。 这就是说，如果两个Ubuntu14.04机器建立连接，（如果没有通过修改配置文件，修改默认算法列表），它们将采用aes128-ctr算法来加密连接。 非对称加密 非对称加密中，需要两个密钥：一个叫公钥，另一个叫私钥。公钥可以被放到任何地方。私钥应该保密，不能与其他方共享。私钥不能靠公钥计算获得。公钥和私钥的关系是：公钥加密的数据只能靠私钥解密。这个操作是单向的，也就是说，公钥没有办法解密自己加密的数据。 SSH在很多地方使用了非对称加密。比如，在建立对称加密时,交换密钥的过程中，双方产生临时密钥对，用来交换共享密钥（对称加密，用于加密整个session）。 非对称加密在SSH中最被人熟知的用途是基于密钥的授权。客户端生成密钥对，然后将公钥上传到访问服务器，放到~/.ssh/authorized_keys 文件中。 在服务器与客户端的对称加密建立以后，客户端需要被授权访问。服务器使用公钥加密一条消息并发送给客户端。如果客户端能解密这条消息，说明拥有私钥，于是授权成功。 哈希 SSH还用了一种数据处理叫做哈希加密。哈希加密用来生成数字签名。哈希加密的主要特点是不能反向解密。生成的数字签名不可预测，而且是唯一的。 使用相同的哈希算法加密消息产生的hash值是不变的。修改消息的任何部分将产生完全不同的哈希值。用户不能通过hash值获得原始的消息，但是可以根据能判断一个消息是否对应给定的hash值。 基于以上特性，哈希值一般用于数据完整性验证和消息可靠性检查。SSH中哈希主要用于HMAC（hash-based message authentication code基于hash的消息授权检查）,用来保证收到的消息是完整的，未修改的。 SSH是如何工作的&lt;未完待续…&gt;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[go命令相关]]></title>
+      <url>%2F2016%2F09%2F30%2Fgo-command%2F</url>
+      <content type="text"><![CDATA[godep相关 1234#安装godepgo get github.com/tools/godep#安装Godeps/Godeps.json中的依赖godep restore]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[使用mock进行单元测试(python)]]></title>
+      <url>%2F2016%2F09%2F21%2Fpython-mock-unittest%2F</url>
+      <content type="text"><![CDATA[此代码涵盖了mock的基本用法，代码来源于mock文档 mock doc 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126from mock import MagicMock, Mock, patch, ANY# 1.使用mock 替换对象中的方法# mock.assert_called_once_with 用于验证调用参数是否正确class ProductionClass(object): def method(self): self.something(1, 2, 3) def something(self, a, b, c): passreal = ProductionClass()real.something = MagicMock()real.method()real.something.assert_called_once_with(1, 2, 3)# 2.使用mock 替代传入参数# assert_called_with 用于验证依赖对像是否被正确使用class ProductionClass(object): def closer(self, something): something.close()real = ProductionClass()mock = Mock()real.closer(mock)mock.close.assert_called_with()# 3.使用Mock 替换Class# 替换类于替换方法类似# 例子需要构造module模块import syssys.modules['module'] = Mock()import moduledef calculate(): instance = module.Helper() return instance.getFactor() *3with patch('module.Helper') as mock: instance = mock.return_value instance.getFactor.return_value = 1 result = calculate() instance.getFactor.assert_called_once_with() #方法被正确调用 assert result == 3 #验证结果是否正确# 4. side_effect, literatemock = MagicMock(side_effect=[4, 5, 6])assert mock()==4assert mock()==5assert mock()==6# 5. side_effect, Exceptionmock = Mock(side_effect=Exception('Boom!'))# 6. side_effect, functionvals = &#123;(1, 2): 1, (2, 3): 2&#125;def side_effect(*args): return vals[args]mock = MagicMock(side_effect=side_effect)assert 1==mock(1, 2)assert 2==mock(2, 3)# 7. 基于类/对象为模板创建对象# 使用模版不存在的方法或者属性会报错class SomeClass(object): passa = SomeClass()mock = Mock(spec=a)#mock.a#mock.old_method() # 报错# 8. mock 调用多次returns = [1, 2]def side_effect(*args): result = returns.pop(0) if isinstance(result, Exception): raise result return resultmock = Mock(side_effect=side_effect)assert 1==mock('first')assert 2==mock('second')# 9. patch应用到多个from unittest2 import TestCase@patch('module.SomeClass')class MyTest(TestCase): def test_one(self, MockSomeClass): self.assertTrue(module.SomeClass is MockSomeClass) def test_two(self, MockSomeClass): self.assertTrue(module.SomeClass is MockSomeClass) def not_a_test(self): return 'something'MyTest('test_one').test_one()MyTest('test_two').test_two()MyTest('test_two').not_a_test()class MyTest(TestCase): def setUp(self): self.patcher = patch('module.foo') self.mock_foo = self.patcher.start() def test_foo(self): self.assertTrue(module.foo is self.mock_foo) def tearDown(self): self.patcher.stop()MyTest('test_foo').run()# 10. ANYmock = Mock(return_value=None)mock('foo', bar=object())mock.assert_called_once_with('foo', bar=ANY)]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[命令行下格式化json]]></title>
+      <url>%2F2016%2F08%2F11%2Fjson-format-linux%2F</url>
+      <content type="text"><![CDATA[1python2 -m json.tool xxx.json]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[向python对象动态添加方法]]></title>
+      <url>%2F2016%2F08%2F06%2Fadd-method-to-python-object%2F</url>
+      <content type="text"><![CDATA[1234567891011121314def barFighters( self ): print "barFighters"a.barFighters = barFightersa.barFighters()Traceback (most recent call last): File "&lt;stdin&gt;", line 1, in &lt;module&gt;TypeError: barFighters() takes exactly 1 argument (0 given)import typesa.barFighters = types.MethodType( barFighters, a )a.barFighters()barFighters &gt; 引用：http://stackoverflow.com/questions/972/adding-a-method-to-an-existing-object-instance]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[svn常用命令]]></title>
+      <url>%2F2016%2F07%2F25%2Fsvn-commond%2F</url>
+      <content type="text"><![CDATA[显示前10条log 1svn log -l 10 显示版本差异,只输出文件名 1svn diff --summarize -r954:958 回退到历史版本 123svn merge -r 958:954 ""svn diffsvn commit -m "revert"]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[curl发送post数据]]></title>
+      <url>%2F2016%2F07%2F21%2Fcurl-post%2F</url>
+      <content type="text"><![CDATA[1curl -d "id=7778&amp;name='wzp'" "http://172.16.102.208:8089/wiapi/score"]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[ssh免密码登录]]></title>
+      <url>%2F2016%2F06%2F07%2Fssh-login-without-password%2F</url>
+      <content type="text"><![CDATA[Note: 首先任意一个机器上生成公钥（ids_rsa.pub）和私钥(ids_rsa), 然后将公钥放到登录目标机器的authorized_keys中, 然后就可以使用私钥登录了。具体流程：http://chenlb.iteye.com/blog/211809]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[查看磁盘使用]]></title>
+      <url>%2F2016%2F06%2F07%2Fdu-first-directory%2F</url>
+      <content type="text"><![CDATA[centos 查看磁盘空间利用大小:df -h 查看当前目录所占空间大小:du -sh du命令查看一级目录centos: du -h –max-depth=1 mac: du -hd1\n]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[python入门]]></title>
+      <url>%2F2016%2F06%2F06%2Ftalk-about-python%2F</url>
+      <content type="text"><![CDATA[python是一个简单而强大的语言，应用领域非常广泛。因此，网上的优秀的入门教程非常多。此文档只是对入门教程的补充。 python的特点 拥有简单而优雅的语法，严格的格式要求, 因此代码很整洁。 开源软件，经过多年的积累，拥有众多的库, 因此完全不需要重复造轮子。 解释性的语言，不需要编译，能够快速执行出结果。因此，常用的调试方式，不是打断点,而是添加日志。 开发方便，不需要IDE支持，notepad也可以作为常用开发软件。 网上有丰富的文档，无论你遇到神马问题，使用百度／谷歌都是很好的解决方法。 安装 官方下载地址： https://www.python.org/downloads/ 推荐版本2.7, 由于python3.x进行了语法的升级，很多库不支持3.x的语法。 安装ipython，ipython是python解释器的升级版，支持语法高亮，tab补全等多个高级功能。5星推荐。 安装库有两种方法, 一种是使用pip或者easy_install（命令行下安装，推荐）,另一种是手动下载库文件(基本上用不到)https://pypi.python.org/pypi?%3Aaction=browse 语法 基本语法与其他语言大同小异，for循环、if条件判断、print 输出打印 常用数据结构有list列表、dict字典等 面向对象编程，class，支持继承 推荐教程 推荐书Dive into python, 很薄的书，可以用来查查语法。中文版 推荐python 官方文档，非常丰富的文档资源https://docs.python.org/2/ 另外一个入门教程http://www.pythondoc.com/pythontutorial27/index.html Hello World!12345678# -*- coding: utf-8 -*-"""auther: 一个忍不住写hello world的人。"""def hello(): print "hello world!"hello()]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[英语学习计划]]></title>
+      <url>%2F2016%2F05%2F17%2Fmy-learning-english-plan%2F</url>
+      <content type="text"><![CDATA[具体练习方法： 流利说APP：纠正发音 听写（沪江听力酷）：增加听力词汇量 复读并录音：纠正发音，提高听力 阅读英文原版书：提高阅读词汇量，并熟悉常用描述方法。 Think in English: 提高表达能力。 口语练习：十分钟描述一件事，或一个东西。 写作练习：写文章，发表到italki上校对。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[英语学习计划]]></title>
+      <url>%2F2016%2F05%2F16%2Flearning-english%2F</url>
+      <content type="text"><![CDATA[学习英语主要目标是理解和表达。 理解，可分为听力和阅读 听力: 发音，词汇量，语法 阅读: 词汇量，语法 表达，可分为口语和写作 说：发音，词汇量，语法 写：写作结构, 常用连接词，词汇量，语法 详细介绍每部分相关的内容： 发音 元音辅音, 读准每一个音很基本也很重要。 Intonation 语调 Linking 连读 Word stress 单词重读 词汇 词汇分为阅读词汇，写作词汇，听力词汇和口语词汇 写作要求使用Academic词汇 每天五个单词，一周可以学30+ 学习单词，要造句，复习单词同样要造句, 造句要体现单词的意思 阅读是被动提高词汇量，而写作是主动的，能在写作或者口语中正确使用的单词，才算真正理解。 语法 语法很重要，熟悉常用的语法结构，并灵活运用 学好语法就可以专注发音和用词的选择 在写作上语法的灵活变化很重要 具体练习方法： 流利说APP：纠正发音 听写（沪江听力酷）：增加听力词汇量 复读并录音：纠正发音，提高听力 阅读英文原版书：提高阅读词汇量，并熟悉常用描述方法。 写作练习：提高写作词汇，常用写作技巧 Think in English: 提高表达能力。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[川藏线]]></title>
+      <url>%2F2016%2F05%2F15%2Fmy-travel-to-Tibet%2F</url>
+      <content type="text"><![CDATA[不知不觉已经完成了川藏线将近一个月的时间，一路走来，有风雨，有快乐，也有些许感悟，更重要的是大量的漂亮的照片。所有的照片 都已经分享在百度云。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Rpc retails]]></title>
+      <url>%2F2015%2F07%2F20%2Frpc-details%2F</url>
+      <content type="text"><![CDATA[todo]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Server performance monitoring]]></title>
+      <url>%2F2015%2F07%2F18%2Fserver-performance-monitoring%2F</url>
+      <content type="text"><![CDATA[todo]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Why you should start a blog?]]></title>
+      <url>%2F2015%2F07%2F17%2Fwhy-you-should-start-a-blog%2F</url>
+      <content type="text"><![CDATA[“Fill you paper with the breathings of your heart.” —William Wordsworth Generally, Blogging will change you in two sides: inside and outside.First, take a look at the inside change. You will be a good writer. At its core, writing is communcation. it is about recoreding thoughts on paper. it will impore with practise. Blogging will not forceyou to become a better writer, it will happen as you do it. And becoming a better writer holds important benefits for the rest of your life–whether you are creating a book, a presentation, a resume, or an anniversary card for your spouse. You will develop an eye for meaningful things. it is simply not possible to write about every thing in your life. Instead, blogging is is a never ending progress of choosing to articulate the most meaningful events and the most important thoughts. then, you automaticly focus the meaningful things and live a meaningful life. You will be a better thinker. the blogging process enourages you to think deeper. Once you start writing about your life and the thoughts that shape it, you’ll begin thinking more intentionally about who you are and who you are becoming. It will lead to healthier life habits. Blogging requires time, devotion, commitment, and discipline. those are good things to embrace. Then, the outside change. Connect people like you. Blogging brings like-minded people together. Starting a blog can help you find those people and share your opinions and thoughts or books and songs. To Market yourself.Blogging is a great way to help market or promote yourself. Blogs are wonderfull tools to help you establish yourselves as experts in a field or topic. Blogging can help legitimize your expertise and expand your online presence and platform. You can show what you have done as a prove. Reference: 15 Reasons I Think You Should Blog Top 10 reasons to blog]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Closures Details]]></title>
+      <url>%2F2015%2F07%2F16%2Fclosures%2F</url>
+      <content type="text"><![CDATA[Definea closure is a data structure storing a function together with an environment: a mapping associating each free variable of the function with the value or storage location the name was bound to at the time the closure was created.A closure—unlike a plain function—allows the function to access those captured variables through the closure’s reference to them, even when the function is invoked outside their scope.The use of closures is associated with languages where functions are first-class objects. Applications Function factories, create functions with args. Emulating private methods with closures Some examples in python, scheme and golang: 1234567# pythondef makeInc(x): def inc(y): # x is "closed" in the definition of inc return y + x return inc 1; scheme later 123456789// golangfunc intSeq() func() int &#123; i := 0 return func() int &#123; i += 1 return i &#125;&#125;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[game robot]]></title>
+      <url>%2F2015%2F06%2F30%2Fgame-robot%2F</url>
+      <content type="text"><![CDATA[load test for game server. source code has been hosted on Github. Main features client basic feature: connect, logic injection client manager, multi client statistics Processfirst, fork the boom. then, modify the code for game server test. add the client with raw socket; add base features for game server:register/login; add logic injection;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[pomelo source analysis]]></title>
+      <url>%2F2015%2F06%2F30%2Fpomelo-source-analysis%2F</url>
+      <content type="text"><![CDATA[As a matter of fact, we can gain lots of benefits from reading source code, so I start to read a game framwork.Pomelo is a fast, scalable game server framework for node.js. I choose it for several reasons. open source code, hosted in Github. contains all the features of game server, and fully documented. help me to get know node.js. similar to my project in work. Main features framework connection: rpc, protocal]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Simple record about building the blog]]></title>
+      <url>%2F2015%2F06%2F24%2Fsimple-record-blog-building-process%2F</url>
+      <content type="text"><![CDATA[check the Lanyon project. change the title, content to make it looks like a blog. add a tag cloud. add a post preview. add tag to post title.]]></content>
+    </entry>
+
+    
+  
+  
+</search>

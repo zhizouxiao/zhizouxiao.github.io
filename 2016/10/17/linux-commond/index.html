@@ -97,7 +97,7 @@ tar压缩与解压缩123456789#  .tartar -cvf tecmint-14-09-12.tar /home/tecmint
 <meta property="og:description" content="文件操作123# 拆分文件 splitsplit -l 100 myfile prefix #按行拆分split -b 100k myfile prefix #按大小拆分
 文件浏览12# 倒序输出 tactac myfile
 tar压缩与解压缩123456789#  .tartar -cvf tecmint-14-09-12.tar /home/tecmint/tar -xvf tecmint-1">
-<meta property="og:updated_time" content="2017-04-01T02:17:57.000Z">
+<meta property="og:updated_time" content="2017-04-24T03:15:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux常用命令">
 <meta name="twitter:description" content="文件操作123# 拆分文件 splitsplit -l 100 myfile prefix #按行拆分split -b 100k myfile prefix #按大小拆分
@@ -119,11 +119,11 @@ tar压缩与解压缩123456789#  .tartar -cvf tecmint-14-09-12.tar /home/tecmint
       author: '博主'
     },
     algolia: {
-      applicationID: 'SJQWC5KD4B',
-      apiKey: '8d8c1e8e61ca91a88c49ae39d82c458c',
-      indexName: 'dev_apu',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: "",
+      labels: ""
     }
   };
 </script>
@@ -245,26 +245,22 @@ tar压缩与解压缩123456789#  .tartar -cvf tecmint-14-09-12.tar /home/tecmint
   
     <div class="site-search">
       
-  
-  <div class="algolia-popup popup search-popup">
-    <div class="algolia-search">
-      <div class="algolia-search-input-icon">
-        <i class="fa fa-search"></i>
-      </div>
-      <div class="algolia-search-input" id="algolia-search-input"></div>
-    </div>
-
-    <div class="algolia-results">
-      <div id="algolia-stats"></div>
-      <div id="algolia-hits"></div>
-      <div id="algolia-pagination" class="algolia-pagination"></div>
-    </div>
-
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
     <span class="popup-btn-close">
       <i class="fa fa-times-circle"></i>
     </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
   </div>
-
+  <div id="local-search-result"></div>
+</div>
 
 
 
@@ -380,6 +376,7 @@ tar压缩与解压缩123456789#  .tartar -cvf tecmint-14-09-12.tar /home/tecmint
         <h5 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 拆分文件 split</span></div><div class="line">split <span class="_">-l</span> 100 myfile prefix <span class="comment">#按行拆分</span></div><div class="line">split -b 100k myfile prefix <span class="comment">#按大小拆分</span></div></pre></td></tr></table></figure>
 <h5 id="文件浏览"><a href="#文件浏览" class="headerlink" title="文件浏览"></a>文件浏览</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 倒序输出 tac</span></div><div class="line">tac myfile</div></pre></td></tr></table></figure>
 <h5 id="tar压缩与解压缩"><a href="#tar压缩与解压缩" class="headerlink" title="tar压缩与解压缩"></a>tar压缩与解压缩</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#  .tar</span></div><div class="line">tar -cvf tecmint-14-09-12.tar /home/tecmint/</div><div class="line">tar -xvf tecmint-14-09-12.tar /home/tecmint/</div><div class="line"><span class="comment"># .tar.gz</span></div><div class="line">tar cvzf MyImages-14-09-12.tar.gz /home/MyImages</div><div class="line">tar xvzf MyImages-14-09-12.tar.gz /home/MyImages</div><div class="line"><span class="comment"># .tar.bz2</span></div><div class="line">tar cvjf MyImages-14-09-12.tar.gz /home/MyImages</div><div class="line">tar xvjf MyImages-14-09-12.tar.gz /home/MyImages</div></pre></td></tr></table></figure>
+<h4 id="查找不包含的文件"><a href="#查找不包含的文件" class="headerlink" title="查找不包含的文件"></a>查找不包含的文件</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find . ! -name <span class="string">"*.2017_04_24"</span> -type f</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -508,7 +505,7 @@ tar压缩与解压缩123456789#  .tartar -cvf tecmint-14-09-12.tar /home/tecmint
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-count">34</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -585,7 +582,7 @@ tar压缩与解压缩123456789#  .tartar -cvf tecmint-14-09-12.tar /home/tecmint
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#文件操作"><span class="nav-number">1.</span> <span class="nav-text">文件操作</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#文件浏览"><span class="nav-number">2.</span> <span class="nav-text">文件浏览</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#tar压缩与解压缩"><span class="nav-number">3.</span> <span class="nav-text">tar压缩与解压缩</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#文件操作"><span class="nav-number">1.</span> <span class="nav-text">文件操作</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#文件浏览"><span class="nav-number">2.</span> <span class="nav-text">文件浏览</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#tar压缩与解压缩"><span class="nav-number">3.</span> <span class="nav-text">tar压缩与解压缩</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查找不包含的文件"><span class="nav-number"></span> <span class="nav-text">查找不包含的文件</span></a></div>
             
 
           </div>
@@ -889,19 +886,6 @@ tar压缩与解压缩123456789#  .tartar -cvf tecmint-14-09-12.tar /home/tecmint
   </script>
 
 
-
-
-  
-  
-  
-  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
-
-  
-  
-  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
-  
-
-  <script src="/js/src/algolia-search.js?v=5.1.0"></script>
 
 
 

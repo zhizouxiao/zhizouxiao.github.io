@@ -110,11 +110,11 @@
       author: '博主'
     },
     algolia: {
-      applicationID: 'SJQWC5KD4B',
-      apiKey: '8d8c1e8e61ca91a88c49ae39d82c458c',
-      indexName: 'dev_apu',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: "",
+      labels: ""
     }
   };
 </script>
@@ -242,26 +242,22 @@
   
     <div class="site-search">
       
-  
-  <div class="algolia-popup popup search-popup">
-    <div class="algolia-search">
-      <div class="algolia-search-input-icon">
-        <i class="fa fa-search"></i>
-      </div>
-      <div class="algolia-search-input" id="algolia-search-input"></div>
-    </div>
-
-    <div class="algolia-results">
-      <div id="algolia-stats"></div>
-      <div id="algolia-hits"></div>
-      <div id="algolia-pagination" class="algolia-pagination"></div>
-    </div>
-
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
     <span class="popup-btn-close">
       <i class="fa fa-times-circle"></i>
     </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
   </div>
-
+  <div id="local-search-result"></div>
+</div>
 
 
 
@@ -296,7 +292,7 @@
             目前共计 14 个标签
         </div>
         <div class="tag-cloud-tags">
-          <a href="/tags/linux/" style="font-size: 30px; color: #111">linux</a> <a href="/tags/linux网络/" style="font-size: 15.6px; color: #a7a7a7">linux网络</a> <a href="/tags/pomelo/" style="font-size: 12px; color: #ccc">pomelo</a> <a href="/tags/python/" style="font-size: 22.8px; color: #5c5c5c">python</a> <a href="/tags/其他/" style="font-size: 19.2px; color: #818181">其他</a> <a href="/tags/工具/" style="font-size: 26.4px; color: #363636">工具</a> <a href="/tags/开发/" style="font-size: 15.6px; color: #a7a7a7">开发</a> <a href="/tags/旅行/" style="font-size: 12px; color: #ccc">旅行</a> <a href="/tags/框架/" style="font-size: 12px; color: #ccc">框架</a> <a href="/tags/源码/" style="font-size: 12px; color: #ccc">源码</a> <a href="/tags/翻译/" style="font-size: 12px; color: #ccc">翻译</a> <a href="/tags/英语/" style="font-size: 15.6px; color: #a7a7a7">英语</a> <a href="/tags/读书/" style="font-size: 19.2px; color: #818181">读书</a> <a href="/tags/项目/" style="font-size: 12px; color: #ccc">项目</a>
+          <a href="/tags/linux/" style="font-size: 30px; color: #111">linux</a> <a href="/tags/linux网络/" style="font-size: 16.5px; color: #9d9d9d">linux网络</a> <a href="/tags/pomelo/" style="font-size: 12px; color: #ccc">pomelo</a> <a href="/tags/python/" style="font-size: 25.5px; color: #404040">python</a> <a href="/tags/其他/" style="font-size: 21px; color: #6f6f6f">其他</a> <a href="/tags/工具/" style="font-size: 30px; color: #111">工具</a> <a href="/tags/开发/" style="font-size: 16.5px; color: #9d9d9d">开发</a> <a href="/tags/旅行/" style="font-size: 12px; color: #ccc">旅行</a> <a href="/tags/框架/" style="font-size: 12px; color: #ccc">框架</a> <a href="/tags/源码/" style="font-size: 12px; color: #ccc">源码</a> <a href="/tags/翻译/" style="font-size: 12px; color: #ccc">翻译</a> <a href="/tags/英语/" style="font-size: 16.5px; color: #9d9d9d">英语</a> <a href="/tags/读书/" style="font-size: 21px; color: #6f6f6f">读书</a> <a href="/tags/项目/" style="font-size: 12px; color: #ccc">项目</a>
         </div>
       </div>
     
@@ -343,7 +339,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-count">34</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -702,19 +698,6 @@
   </script>
 
 
-
-
-  
-  
-  
-  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
-
-  
-  
-  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
-  
-
-  <script src="/js/src/algolia-search.js?v=5.1.0"></script>
 
 
 
