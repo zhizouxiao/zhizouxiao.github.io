@@ -96,7 +96,7 @@
     <entry>
       <title><![CDATA[linux常用命令]]></title>
       <url>%2F2016%2F10%2F17%2Flinux-commond%2F</url>
-      <content type="text"><![CDATA[文件操作123# 拆分文件 splitsplit -l 100 myfile prefix #按行拆分split -b 100k myfile prefix #按大小拆分 文件浏览12# 倒序输出 tactac myfile tar压缩与解压缩123456789# .tartar -cvf tecmint-14-09-12.tar /home/tecmint/tar -xvf tecmint-14-09-12.tar /home/tecmint/# .tar.gztar cvzf MyImages-14-09-12.tar.gz /home/MyImagestar xvzf MyImages-14-09-12.tar.gz /home/MyImages# .tar.bz2tar cvjf MyImages-14-09-12.tar.gz /home/MyImagestar xvjf MyImages-14-09-12.tar.gz /home/MyImages 查找不包含的文件1find . ! -name "*.2017_04_24" -type f]]></content>
+      <content type="text"><![CDATA[文件操作123# 拆分文件 splitsplit -l 100 myfile prefix #按行拆分split -b 100k myfile prefix #按大小拆分 文件浏览12# 倒序输出 tactac myfile tar压缩与解压缩123456789# .tartar -cvf tecmint-14-09-12.tar /home/tecmint/tar -xvf tecmint-14-09-12.tar /home/tecmint/# .tar.gztar cvzf MyImages-14-09-12.tar.gz /home/MyImagestar xvzf MyImages-14-09-12.tar.gz /home/MyImages# .tar.bz2tar cvjf MyImages-14-09-12.tar.gz /home/MyImagestar xvjf MyImages-14-09-12.tar.gz /home/MyImages 查找不包含的文件1find . ! -name "*.2017_04_24" -type f docker attach第一个container1sudo docker attach `sudo docker ps |grep "day" | cut -d" " -f1`]]></content>
     </entry>
 
     
@@ -220,16 +220,16 @@
 
     
     <entry>
-      <title><![CDATA[game robot]]></title>
-      <url>%2F2015%2F06%2F30%2Fgame-robot%2F</url>
-      <content type="text"><![CDATA[load test for game server. source code has been hosted on Github. Main features client basic feature: connect, logic injection client manager, multi client statistics Processfirst, fork the boom. then, modify the code for game server test. add the client with raw socket; add base features for game server:register/login; add logic injection;]]></content>
+      <title><![CDATA[pomelo source analysis]]></title>
+      <url>%2F2015%2F06%2F30%2Fpomelo-source-analysis%2F</url>
+      <content type="text"><![CDATA[As a matter of fact, we can gain lots of benefits from reading source code, so I start to read a game framwork.Pomelo is a fast, scalable game server framework for node.js. I choose it for several reasons. open source code, hosted in Github. contains all the features of game server, and fully documented. help me to get know node.js. similar to my project in work. Main features framework connection: rpc, protocal]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[pomelo source analysis]]></title>
-      <url>%2F2015%2F06%2F30%2Fpomelo-source-analysis%2F</url>
-      <content type="text"><![CDATA[As a matter of fact, we can gain lots of benefits from reading source code, so I start to read a game framwork.Pomelo is a fast, scalable game server framework for node.js. I choose it for several reasons. open source code, hosted in Github. contains all the features of game server, and fully documented. help me to get know node.js. similar to my project in work. Main features framework connection: rpc, protocal]]></content>
+      <title><![CDATA[game robot]]></title>
+      <url>%2F2015%2F06%2F30%2Fgame-robot%2F</url>
+      <content type="text"><![CDATA[load test for game server. source code has been hosted on Github. Main features client basic feature: connect, logic injection client manager, multi client statistics Processfirst, fork the boom. then, modify the code for game server test. add the client with raw socket; add base features for game server:register/login; add logic injection;]]></content>
     </entry>
 
     
