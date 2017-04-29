@@ -3,6 +3,20 @@
   
     
     <entry>
+      <title><![CDATA[Mac相关]]></title>
+      <url>%2F2017%2F04%2F29%2Fmac-related%2F</url>
+      <content type="text"><![CDATA[Mac相关12345# mac启动ftp服务器sudo -s launchctl load -w /System/Library/LaunchDaemons/ftp.plist# mac检查占用80端口的进程sudo lsof -n -i:80 | grep LISTEN]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[工作总结0429]]></title>
+      <url>%2F2017%2F04%2F29%2Fwork-log%2F</url>
+      <content type="text"><![CDATA[最近找工作和一些其他事，总结出： 工作重点在后端, 在后端精通后，在考虑学习前端。 今年要在后端有所进展，包括网络／数据库／多线程／代码规范。 小公司大多不靠谱，领导层容易有偏见，工作辛苦而且技术得不到积累。 下一份工作一定要慎重。 保持对工作机会的敏感度。 对一些基础知识，要有自己的理解和总结。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[tool-tmux]]></title>
       <url>%2F2017%2F04%2F22%2Ftool-tmux%2F</url>
       <content type="text"><![CDATA[session 管理1234567891011121314151617181920211. 新建session tmux new -s session_name 2. 进入session tmux attach -t session_name 3. 切换sessiontmux switch -t session_name4. 列出所有session tmux list-sessions 5. 离开sessiontmux detach (prefix + d)6. 关闭sessiontmux kill-session -t session_name window管理123456781. 新建window tmux new-window (prefix + c)2. 切换windowtmux select-window -t :0-9 (prefix + 0-9)3. 重命名windowtmux rename-window (prefix + ,) pane 管理12345678910111213141516171. 垂直拆分tmux split-window (prefix + &quot;)2. 水平拆分tmux split-window -h (prefix + %)3. 交换tmux swap-pane -[UDLR] (prefix + &#123; or &#125;)4. 选择tmux select-pane -[UDLR]（prefix + [arrow]）5. 最大化当前窗口/还原tmux resize-pane (prefix + z)6. 关闭最大窗口tmux close-pane (prefix + x) 其他1234567891. 加载配置文件tmux source-file .tmux.conf2. 复制 .tmux.confbind [ copy-modebind-key -t vi-copy &apos;v&apos; begin-selection # Begin selection in copy mode.bind-key -t vi-copy &apos;V&apos; rectangle-toggle # Begin selection in copy mode.bind-key -t vi-copy &apos;y&apos; copy-selection # Yank selection in copy mode.bind ] paste-buffer]]></content>
@@ -150,16 +164,16 @@
 
     
     <entry>
-      <title><![CDATA[ssh免密码登录]]></title>
-      <url>%2F2016%2F06%2F07%2Fssh-login-without-password%2F</url>
-      <content type="text"><![CDATA[Note: 首先任意一个机器上生成公钥（ids_rsa.pub）和私钥(ids_rsa), 然后将公钥放到登录目标机器的authorized_keys中, 然后就可以使用私钥登录了。具体流程：http://chenlb.iteye.com/blog/211809]]></content>
+      <title><![CDATA[查看磁盘使用]]></title>
+      <url>%2F2016%2F06%2F07%2Fdu-first-directory%2F</url>
+      <content type="text"><![CDATA[centos 查看磁盘空间利用大小:df -h 查看当前目录所占空间大小:du -sh du命令查看一级目录centos: du -h –max-depth=1 mac: du -hd1\n]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[查看磁盘使用]]></title>
-      <url>%2F2016%2F06%2F07%2Fdu-first-directory%2F</url>
-      <content type="text"><![CDATA[centos 查看磁盘空间利用大小:df -h 查看当前目录所占空间大小:du -sh du命令查看一级目录centos: du -h –max-depth=1 mac: du -hd1\n]]></content>
+      <title><![CDATA[ssh免密码登录]]></title>
+      <url>%2F2016%2F06%2F07%2Fssh-login-without-password%2F</url>
+      <content type="text"><![CDATA[Note: 首先任意一个机器上生成公钥（ids_rsa.pub）和私钥(ids_rsa), 然后将公钥放到登录目标机器的authorized_keys中, 然后就可以使用私钥登录了。具体流程：http://chenlb.iteye.com/blog/211809]]></content>
     </entry>
 
     

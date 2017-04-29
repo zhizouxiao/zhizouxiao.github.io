@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="开发,框架,源码,pomelo," />
+  <meta name="keywords" content="do it again, do it better!" />
 
 
 
@@ -87,16 +87,12 @@
 
 
 
-<meta name="description" content="As a matter of fact, we can gain lots of benefits from reading source code, so I start to read a game framwork.Pomelo is a fast, scalable game server framework for node.js. I choose it for several rea">
-<meta property="og:type" content="article">
-<meta property="og:title" content="pomelo source analysis">
-<meta property="og:url" content="http://zhizouxiao.github.io/2015/06/30/pomelo-source-analysis/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Eli's Notes">
+<meta property="og:url" content="http://zhizouxiao.github.io/tags/工作日志/index.html">
 <meta property="og:site_name" content="Eli's Notes">
-<meta property="og:description" content="As a matter of fact, we can gain lots of benefits from reading source code, so I start to read a game framwork.Pomelo is a fast, scalable game server framework for node.js. I choose it for several rea">
-<meta property="og:updated_time" content="2017-04-01T02:17:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="pomelo source analysis">
-<meta name="twitter:description" content="As a matter of fact, we can gain lots of benefits from reading source code, so I start to read a game framwork.Pomelo is a fast, scalable game server framework for node.js. I choose it for several rea">
+<meta name="twitter:title" content="Eli's Notes">
 
 
 
@@ -124,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://zhizouxiao.github.io/2015/06/30/pomelo-source-analysis/"/>
+  <link rel="canonical" href="http://zhizouxiao.github.io/tags/工作日志/"/>
 
 
 
 
 
-  <title> pomelo source analysis | Eli's Notes </title>
+  <title> 标签: 工作日志 | Eli's Notes </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -155,7 +151,7 @@
     
   
 
-  <div class="container sidebar-position-right page-post-detail ">
+  <div class="container sidebar-position-right  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -273,190 +269,46 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://zhizouxiao.github.io/2015/06/30/pomelo-source-analysis/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Eli Wang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/logo.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Eli's Notes">
-    </span>
+  <div id="posts" class="posts-collapse">
+    <div class="collection-title">
+      <h2 >
+        工作日志
+        <small>标签</small>
+      </h2>
+    </div>
 
     
-      <header class="post-header">
+      
 
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
         
-        
-          <h2 class="post-title" itemprop="name headline">
-            
-            
+            <a class="post-title-link" href="/2017/04/29/work-log/" itemprop="url">
               
-                pomelo source analysis
+                <span itemprop="name">工作总结0429</span>
               
-            
-          </h2>
+            </a>
         
+      </h2>
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-06-30T00:00:00+08:00">
-                2015-06-30
-              </time>
-            
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-04-29T22:34:51+08:00"
+              content="2017-04-29" >
+          04-29
+        </time>
+      </div>
 
-            
-
-            
-          </span>
-
-          
-
-          
-            
-            <!--noindex-->
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2015/06/30/pomelo-source-analysis/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2015/06/30/pomelo-source-analysis/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-              <!--/noindex-->
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>As a matter of fact, we can gain lots of benefits from reading source code, so I start to read a game framwork.<br><a href="https://github.com/NetEase/pomelo" target="_blank" rel="external">Pomelo</a> is a fast, scalable game server framework for node.js. I choose it for several reasons.</p>
-<ol>
-<li>open source code, hosted in Github.</li>
-<li>contains all the features of game server, and fully documented.</li>
-<li>help me to get know node.js.</li>
-<li>similar to my project in work.</li>
-</ol>
-<h3>Main features</h3>
-
-<ul>
-<li><a herf="">framework</a></li>
-<li><a herf="">connection: rpc, protocal</a></li>
-</ul>
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/开发/" rel="tag"># 开发</a>
-          
-            <a href="/tags/框架/" rel="tag"># 框架</a>
-          
-            <a href="/tags/源码/" rel="tag"># 源码</a>
-          
-            <a href="/tags/pomelo/" rel="tag"># pomelo</a>
-          
-        </div>
-      
-
-      
-        
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2015/06/30/game-robot/" rel="next" title="game robot">
-                <i class="fa fa-chevron-left"></i> game robot
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/07/16/closures/" rel="prev" title="Closures Details">
-                Closures Details <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
+    </header>
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
+    
   </div>
+
+  
 
 
           </div>
@@ -464,12 +316,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-      <div id="hypercomments_widget"></div>
-    
-  </div>
-
 
         </div>
         
@@ -489,17 +335,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/logo.png"
@@ -581,22 +418,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">Main features</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -711,10 +532,6 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
-
-
 
   
 
@@ -738,8 +555,6 @@
 
 		_hcwp.push({widget:"Bloggerstream", widget_id: 89018, selector:".hc-comment-count", label: "{\%COUNT%\}" });
 
-		
-		_hcwp.push({widget:"Stream", widget_id: 89018, xid: "2015/06/30/pomelo-source-analysis/"});
 		
 
 		(function() {
