@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[书 《Just for fun》]]></title>
+      <url>%2F2017%2F06%2F25%2Fbook-just-for-fun%2F</url>
+      <content type="text"><![CDATA[Just for fun nobody can predict future, not even linus. Number One is: “Do unto others as you would want them to do unto you.” If you follow that rule, you’ll always know how to behave in any situation. Number Two is: “Be proud of what you do.” Number Three: “And have fun doing it. what I find to be unacceptable is when people, either leaders or followers, then try to impose their own world views on others. I’m a big believer in individual choice, which means that I think I should make my own decisions when it comes to moral issues. “Ain’t no time to hate.” What really sells, of course, is perception, not reality. Cruise liners sell the perception of freedom, of the salty seas, of good food and romance of Love Boat proportions. In fact, nobody even wants a computer. What everybody wants is this magical toy that can be used to browse the Web, write term papers, play games, balance the checkbook, and so on. And I, as a technologist, know that technology drives nothing. It is society that changes technology, not the other way around. Technology just sets the boundaries for what we can do, and how cheaply we can do it. my argument went, in order to understand the evolution of society, you have to understand what really motivates people. Is it money? Is it success? Is it sex? What fundamentally makes people do what they do? “that’s it: Survival. Your place in the social order. And entertainment.”]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Mac相关]]></title>
       <url>%2F2017%2F04%2F29%2Fmac-related%2F</url>
       <content type="text"><![CDATA[Mac相关12345# mac启动ftp服务器sudo -s launchctl load -w /System/Library/LaunchDaemons/ftp.plist# mac检查占用80端口的进程sudo lsof -n -i:80 | grep LISTEN]]></content>
@@ -47,7 +54,7 @@
     <entry>
       <title><![CDATA[读书 2017]]></title>
       <url>%2F2017%2F04%2F06%2Fbooks-I-have-read%2F</url>
-      <content type="text"><![CDATA[2017-03-15 细雪 2017-04-06 the start-up of you]]></content>
+      <content type="text"><![CDATA[2017-03-15 细雪 2017-04-06 the start-up of you 2017-06-25 Just for Fun : The Story of an Accidental Revolutionary]]></content>
     </entry>
 
     
@@ -59,13 +66,6 @@
 
     
     <entry>
-      <title><![CDATA[(linux常用命令)iostat]]></title>
-      <url>%2F2016%2F12%2F16%2Flinux-iostat-commond%2F</url>
-      <content type="text"><![CDATA[CPUiostatavg-cpu: %user %nice %system %iowait %steal %idle 1.95 0.06 0.41 0.03 0.00 97.56cpu属性值说明：%user：CPU处在用户模式下的时间百分比。%nice：CPU处在带NICE值的用户模式下的时间百分比。%system：CPU处在系统模式下的时间百分比。%iowait：CPU等待输入输出完成时间的百分比。%steal：管理程序维护另一个虚拟处理器时，虚拟CPU的无意识等待时间百分比。%idle：CPU空闲时间百分比。 注： 如果%iowait的值过高，表示硬盘存在 I/O瓶颈， %idle值高，表示CPU较空闲，如果%idle值高但系统响应慢时，有可能是CPU等待分配内存，此时应加大内存容量。 %idle值如果持续低于10，那么系统的CPU处理能力相对较低，表明系统中最需要解决的资源是CPU。 Diskiostat -d -x -k 1 1 Device: rrqm/s wrqm/s r/s w/s rkB/s wkB/s avgrq-sz avgqu-sz await r_await w_await svctm %utilvda 0.00 7.38 0.04 4.60 0.73 63.26 27.59 0.06 12.58 19.94 12.53 6.63 3.07vdb 0.00 6.97 0.21 6.14 6.30 180.95 58.99 0.07 11.59 4.15 11.85 0.61 0.39rrqm/s: 每秒进行 merge 的读操作数目。即 rmerge/swrqm/s: 每秒进行 merge 的写操作数目。即 wmerge/sr/s: 每秒完成的读 I/O 设备次数。即 rio/sw/s: 每秒完成的写 I/O 设备次数。即 wio/srsec/s: 每秒读扇区数。即 rsect/swsec/s: 每秒写扇区数。即 wsect/srkB/s: 每秒读K字节数。是 rsect/s 的一半，因为每扇区大小为512字节。wkB/s: 每秒写K字节数。是 wsect/s 的一半。avgrq-sz: 平均每次设备I/O操作的数据大小 (扇区)。avgqu-sz: 平均I/O队列长度。await: 平均每次设备I/O操作的等待时间 (毫秒)。svctm: 平均每次设备I/O操作的服务时间 (毫秒)。%util: 一秒中有百分之多少的时间用于 I/O 操作，即被io消耗的cpu百分比 备注：如果 %util 接近 100%，说明产生的I/O请求太多，I/O系统已经满负荷，该磁盘可能存在瓶颈。如果 svctm 比较接近 await，说明 I/O 几乎没有等待时间；如果 await 远大于 svctm，说明I/O 队列太长，io响应太慢，则需要进行必要优化。如果avgqu-sz比较大，也表示有当量io在等待。如果 %util 接近 100%，说明产生的I/O请求太多，I/O系统已经满负荷，该磁盘可能存在瓶颈。 idle小于70% IO压力就较大了，一般读取速度有较多的wait。 同时可以结合vmstat 查看查看b参数(等待资源的进程数)和wa参数(IO等待所占用的CPU时间的百分比，高过30%时IO压力高)。 另外 await 的参数也要多和 svctm 来参考。差的过高就一定有 IO 的问题。 avgqu-sz 也是个做 IO 调优时需要注意的地方，这个就是直接每次操作的数据的大小，如果次数多，但数据拿的小的话，其实 IO 也会很小。如果数据拿的大，才IO 的数据会高。也可以通过 avgqu-sz × ( r/s or w/s ) = rsec/s or wsec/s。也就是讲，读定速度是这个来决定的。 svctm 一般要小于 await (因为同时等待的请求的等待时间被重复计算了)，svctm 的大小一般和磁盘性能有关，CPU/内存的负荷也会对其有影响，请求过多也会间接导致 svctm 的增加。await 的大小一般取决于服务时间(svctm) 以及 I/O 队列的长度和 I/O 请求的发出模式。如果 svctm 比较接近 await，说明 I/O 几乎没有等待时间；如果 await 远大于 svctm，说明 I/O 队列太长，应用得到的响应时间变慢，如果响应时间超过了用户可以容许的范围，这时可以考虑更换更快的磁盘，调整内核 elevator 算法，优化应用，或者升级 CPU。 队列长度(avgqu-sz)也可作为衡量系统 I/O 负荷的指标，但由于 avgqu-sz 是按照单位时间的平均值，所以不能反映瞬间的 I/O 洪水。 形象的比喻：r/s+w/s 类似于交款人的总数平均队列长度(avgqu-sz)类似于单位时间里平均排队人的个数平均服务时间(svctm)类似于收银员的收款速度平均等待时间(await)类似于平均每人的等待时间平均I/O数据(avgrq-sz)类似于平均每人所买的东西多少I/O 操作率 (%util)类似于收款台前有人排队的时间比例设备IO操作:总IO(io)/s = r/s(读) +w/s(写) 平均等待时间=单个I/O服务器时间*(1+2+…+请求总数-1)/请求总数 每秒发出的I/0请求很多,但是平均队列就4,表示这些请求比较均匀,大部分处理还是比较及时。]]></content>
-    </entry>
-
-    
-    <entry>
       <title><![CDATA[(linux网络)netstat]]></title>
       <url>%2F2016%2F12%2F16%2Flinux-network-commond%2F</url>
       <content type="text"><![CDATA[netstatnetstat 用于列出所有tcp，udp连接 显示当前所有活动的网络连接 ~ » netstat -an | head -n 10 wazi@eli Active Internet connections (including servers) Proto Recv-Q Send-Q Local Address Foreign Address (state) tcp4 0 0 172.16.13.172.54304 180.149.131.55.8843 SYN_SENT tcp4 0 0 172.16.13.172.54303 45.32.41.155.44005 ESTABLISHED tcp4 0 0 127.0.0.1.60409 127.0.0.1.54302 ESTABLISHED tcp4 0 0 127.0.0.1.54302 127.0.0.1.60409 ESTABLISHED tcp4 0 0 172.16.13.172.54300 45.32.41.155.44005 ESTABLISHED tcp4 0 0 127.0.0.1.60409 127.0.0.1.54299 ESTABLISHED tcp4 0 0 127.0.0.1.54299 127.0.0.1.60409 ESTABLISHED tcp4 0 0 172.16.13.172.54296 111.203.187.167.3306 ESTABLISHED 连接状态： LISTEN：侦听来自远方的TCP端口的连接请求 SYN-SENT：再发送连接请求后等待匹配的连接请求 SYN-RECEIVED：再收到和发送一个连接请求后等待对方对连接请求的确认 ESTABLISHED：代表一个打开的连接 FIN-WAIT-1：等待远程TCP连接中断请求，或先前的连接中断请求的确认 FIN-WAIT-2：从远程TCP等待连接中断请求 CLOSE-WAIT：等待从本地用户发来的连接中断请求 CLOSING：等待远程TCP对连接中断的确认 LAST-ACK：等待原来的发向远程TCP的连接中断请求的确认 TIME-WAIT：等待足够的时间以确保远程TCP接收到连接中断请求的确认 CLOSED：没有任何连接状态 显示所有连接ipnetstat -n -p | grep ES | awk ‘{print $5}’ | awk -F: ‘{print $1}’ 显示数量netstat -anp |grep ‘tcp|udp’ | awk ‘{print $5}’ | cut -d: -f1 | sort | uniq -d]]></content>
@@ -73,9 +73,9 @@
 
     
     <entry>
-      <title><![CDATA[(linux常用命令)内存]]></title>
-      <url>%2F2016%2F12%2F10%2Flinux-memory-commond%2F</url>
-      <content type="text"><![CDATA[free 命令1234567891011free -h total used free shared buffers cachedMem: 4.0G 2.6G 1.4G 5.0M 0B 426M-/+ buffers/cache: 2.2G 1.8GSwap: 2.0G 766M 1.3Gbuffer：将要写到磁盘上的内容cached: 缓存到内存，供以后使用的数据2.2G: used(2.6G) - buffer(0B) - cached(426M) 1.8G: used(1.4G) + buffer(0B) + cached(426M) vmstat 命令12345678910111213141516171819202122232425262728293031323334shell: vmstat -S m 1 3procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu----- r b swpd free buff cache si so bi bo in cs us sy id wa st 2 0 0 314 323 14996 0 0 1 25 1 5 1 1 98 0 0 0 0 0 314 323 14996 0 0 0 164 1236 2243 3 1 95 1 0 0 0 0 312 323 14996 0 0 0 72 1233 2324 3 1 95 0 0Procs（进程）:r: 运行队列中进程数量b: 等待IO的进程数量Memory（内存）:swpd: 使用虚拟内存大小free: 可用内存大小buff: 用作缓冲的内存大小cache: 用作缓存的内存大小Swap:si: 每秒从交换区写到内存的大小so: 每秒写入交换区的内存大小IO：（现在的Linux版本块的大小为1024bytes）bi: 每秒读取的块数bo: 每秒写入的块数system：in: 每秒中断数，包括时钟中断cs: 每秒上下文切换数CPU（以百分比表示）us: 用户进程执行时间(user time)sy: 系统进程执行时间(system time)id: 空闲时间(包括IO等待时间)wa: 等待IO时间]]></content>
+      <title><![CDATA[(linux常用命令)iostat]]></title>
+      <url>%2F2016%2F12%2F16%2Flinux-iostat-commond%2F</url>
+      <content type="text"><![CDATA[CPUiostatavg-cpu: %user %nice %system %iowait %steal %idle 1.95 0.06 0.41 0.03 0.00 97.56cpu属性值说明：%user：CPU处在用户模式下的时间百分比。%nice：CPU处在带NICE值的用户模式下的时间百分比。%system：CPU处在系统模式下的时间百分比。%iowait：CPU等待输入输出完成时间的百分比。%steal：管理程序维护另一个虚拟处理器时，虚拟CPU的无意识等待时间百分比。%idle：CPU空闲时间百分比。 注： 如果%iowait的值过高，表示硬盘存在 I/O瓶颈， %idle值高，表示CPU较空闲，如果%idle值高但系统响应慢时，有可能是CPU等待分配内存，此时应加大内存容量。 %idle值如果持续低于10，那么系统的CPU处理能力相对较低，表明系统中最需要解决的资源是CPU。 Diskiostat -d -x -k 1 1 Device: rrqm/s wrqm/s r/s w/s rkB/s wkB/s avgrq-sz avgqu-sz await r_await w_await svctm %utilvda 0.00 7.38 0.04 4.60 0.73 63.26 27.59 0.06 12.58 19.94 12.53 6.63 3.07vdb 0.00 6.97 0.21 6.14 6.30 180.95 58.99 0.07 11.59 4.15 11.85 0.61 0.39rrqm/s: 每秒进行 merge 的读操作数目。即 rmerge/swrqm/s: 每秒进行 merge 的写操作数目。即 wmerge/sr/s: 每秒完成的读 I/O 设备次数。即 rio/sw/s: 每秒完成的写 I/O 设备次数。即 wio/srsec/s: 每秒读扇区数。即 rsect/swsec/s: 每秒写扇区数。即 wsect/srkB/s: 每秒读K字节数。是 rsect/s 的一半，因为每扇区大小为512字节。wkB/s: 每秒写K字节数。是 wsect/s 的一半。avgrq-sz: 平均每次设备I/O操作的数据大小 (扇区)。avgqu-sz: 平均I/O队列长度。await: 平均每次设备I/O操作的等待时间 (毫秒)。svctm: 平均每次设备I/O操作的服务时间 (毫秒)。%util: 一秒中有百分之多少的时间用于 I/O 操作，即被io消耗的cpu百分比 备注：如果 %util 接近 100%，说明产生的I/O请求太多，I/O系统已经满负荷，该磁盘可能存在瓶颈。如果 svctm 比较接近 await，说明 I/O 几乎没有等待时间；如果 await 远大于 svctm，说明I/O 队列太长，io响应太慢，则需要进行必要优化。如果avgqu-sz比较大，也表示有当量io在等待。如果 %util 接近 100%，说明产生的I/O请求太多，I/O系统已经满负荷，该磁盘可能存在瓶颈。 idle小于70% IO压力就较大了，一般读取速度有较多的wait。 同时可以结合vmstat 查看查看b参数(等待资源的进程数)和wa参数(IO等待所占用的CPU时间的百分比，高过30%时IO压力高)。 另外 await 的参数也要多和 svctm 来参考。差的过高就一定有 IO 的问题。 avgqu-sz 也是个做 IO 调优时需要注意的地方，这个就是直接每次操作的数据的大小，如果次数多，但数据拿的小的话，其实 IO 也会很小。如果数据拿的大，才IO 的数据会高。也可以通过 avgqu-sz × ( r/s or w/s ) = rsec/s or wsec/s。也就是讲，读定速度是这个来决定的。 svctm 一般要小于 await (因为同时等待的请求的等待时间被重复计算了)，svctm 的大小一般和磁盘性能有关，CPU/内存的负荷也会对其有影响，请求过多也会间接导致 svctm 的增加。await 的大小一般取决于服务时间(svctm) 以及 I/O 队列的长度和 I/O 请求的发出模式。如果 svctm 比较接近 await，说明 I/O 几乎没有等待时间；如果 await 远大于 svctm，说明 I/O 队列太长，应用得到的响应时间变慢，如果响应时间超过了用户可以容许的范围，这时可以考虑更换更快的磁盘，调整内核 elevator 算法，优化应用，或者升级 CPU。 队列长度(avgqu-sz)也可作为衡量系统 I/O 负荷的指标，但由于 avgqu-sz 是按照单位时间的平均值，所以不能反映瞬间的 I/O 洪水。 形象的比喻：r/s+w/s 类似于交款人的总数平均队列长度(avgqu-sz)类似于单位时间里平均排队人的个数平均服务时间(svctm)类似于收银员的收款速度平均等待时间(await)类似于平均每人的等待时间平均I/O数据(avgrq-sz)类似于平均每人所买的东西多少I/O 操作率 (%util)类似于收款台前有人排队的时间比例设备IO操作:总IO(io)/s = r/s(读) +w/s(写) 平均等待时间=单个I/O服务器时间*(1+2+…+请求总数-1)/请求总数 每秒发出的I/0请求很多,但是平均队列就4,表示这些请求比较均匀,大部分处理还是比较及时。]]></content>
     </entry>
 
     
@@ -83,6 +83,13 @@
       <title><![CDATA[(linux常用命令)top]]></title>
       <url>%2F2016%2F12%2F10%2Flinux-top-commond%2F</url>
       <content type="text"><![CDATA[top 命令123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081top -ctop - 17:48:50 up 151 days, 3:31, 1 user, load average: 0.07, 0.12, 0.09Tasks: 132 total, 1 running, 131 sleeping, 0 stopped, 0 zombieCpu(s): 1.0%us, 0.5%sy, 0.2%ni, 98.3%id, 0.0%wa, 0.0%hi, 0.0%si, 0.0%stMem: 4194304k total, 4179548k used, 14756k free, 0k buffersSwap: 2097152k total, 782360k used, 1314792k free, 1977088k cachedPID USER PR NI VIRT RES SHR S %CPU %MEM TIME+ COMMAND1033 mysql 20 0 1158m 7988 1620 S 0.3 0.2 30:16.67 /usr/libexec/mysqld --basedi7134 tyhall 20 0 1605m 167m 15m S 0.3 4.1 0:29.42 pypy run.py UT001 192.168.107136 tyhall 20 0 347m 166m 17m S 0.3 4.1 0:24.37 pypy run.py GT21-001-998-1 117:48:50 ： 系统当前时间151 days, 3:31 ： 系统开机到现在经过了多少时间1 users ： 当前2用户在线load average: 0.07, 0.12, 0.09： 系统1分钟、5分钟、15分钟的CPU负载信息Tasks：任务;132 total：当前有132个进程。1 running：1个进程正在运行131 sleeping：131个进程睡眠0 stopped：停止的进程数0 zombie：僵死的进程数Cpu(s)：表示这一行显示CPU总体信息1.0%us：用户态进程占用CPU时间百分比，不包含renice值为负的任务占用的CPU的时间。0.5%sy：内核占用CPU时间百分比0.2%ni：改变过优先级的进程占用CPU的百分比98.3%id：空闲CPU时间百分比0.0%wa：等待I/O的CPU时间百分比0.0%hi：CPU硬中断时间百分比0.0%si：CPU软中断时间百分比注：这里显示数据是所有cpu的平均值，如果想看每一个cpu的处理情况，按1即可；折叠，再次按1；(centos)Mem：内存4194304k total：物理内存总量4179548k used：使用的物理内存量14756k free：空闲的物理内存量0k buffers：用作内核缓存的物理内存量Swap：交换空间2097152k total：交换区总量782360k used：使用的交换区量1314792k free：空闲的交换区量1977088k cached：缓冲交换区总量PID：进程的IDUSER：进程所有者PR：进程的优先级别，越小越优先被执行NI：值Nice Value 如果为负值，则有较高优先级；如果为正值则为较低优先级；如果为0，则无优先级调整VIRT：进程占用的虚拟内存RES：进程占用的物理内存SHR：进程使用的共享内存S：进程的状态。S表示休眠，R表示正在运行，Z表示僵死状态，N表示该进程优先值为负数%CPU：进程占用CPU的使用率%MEM：进程使用的物理内存和总内存的百分比TIME+：该进程启动后占用的总的CPU时间，即占用CPU使用时间的累加值。COMMAND：进程启动命令名称q：退出top命令&lt;Space&gt;：立即刷新s：设置刷新时间间隔c：显示命令完全模式t: 显示或隐藏进程和CPU状态信息m：显示或隐藏内存状态信息l：显示或隐藏uptime信息f：增加或减少进程显示标志S：累计模式，会把已完成或退出的子进程占用的CPU时间累计到父进程的MITE+P：按%CPU使用率排行T：按MITE+排行M：按%MEM排行u：指定显示用户进程r：修改进程renice值k: kill进程i：只显示正在运行的进程W：保存对top的设置到文件^/.toprc，下次启动将自动调用toprc文件的设置。h：帮助命令。q：退出如果只需要查看内存：可用free命令。只查看uptime信息（第一行），可用uptime命令；]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[(linux常用命令)内存]]></title>
+      <url>%2F2016%2F12%2F10%2Flinux-memory-commond%2F</url>
+      <content type="text"><![CDATA[free 命令1234567891011free -h total used free shared buffers cachedMem: 4.0G 2.6G 1.4G 5.0M 0B 426M-/+ buffers/cache: 2.2G 1.8GSwap: 2.0G 766M 1.3Gbuffer：将要写到磁盘上的内容cached: 缓存到内存，供以后使用的数据2.2G: used(2.6G) - buffer(0B) - cached(426M) 1.8G: used(1.4G) + buffer(0B) + cached(426M) vmstat 命令12345678910111213141516171819202122232425262728293031323334shell: vmstat -S m 1 3procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu----- r b swpd free buff cache si so bi bo in cs us sy id wa st 2 0 0 314 323 14996 0 0 1 25 1 5 1 1 98 0 0 0 0 0 314 323 14996 0 0 0 164 1236 2243 3 1 95 1 0 0 0 0 312 323 14996 0 0 0 72 1233 2324 3 1 95 0 0Procs（进程）:r: 运行队列中进程数量b: 等待IO的进程数量Memory（内存）:swpd: 使用虚拟内存大小free: 可用内存大小buff: 用作缓冲的内存大小cache: 用作缓存的内存大小Swap:si: 每秒从交换区写到内存的大小so: 每秒写入交换区的内存大小IO：（现在的Linux版本块的大小为1024bytes）bi: 每秒读取的块数bo: 每秒写入的块数system：in: 每秒中断数，包括时钟中断cs: 每秒上下文切换数CPU（以百分比表示）us: 用户进程执行时间(user time)sy: 系统进程执行时间(system time)id: 空闲时间(包括IO等待时间)wa: 等待IO时间]]></content>
     </entry>
 
     
@@ -164,16 +171,16 @@
 
     
     <entry>
-      <title><![CDATA[ssh免密码登录]]></title>
-      <url>%2F2016%2F06%2F07%2Fssh-login-without-password%2F</url>
-      <content type="text"><![CDATA[Note: 首先任意一个机器上生成公钥（ids_rsa.pub）和私钥(ids_rsa), 然后将公钥放到登录目标机器的authorized_keys中, 然后就可以使用私钥登录了。具体流程：http://chenlb.iteye.com/blog/211809]]></content>
+      <title><![CDATA[查看磁盘使用]]></title>
+      <url>%2F2016%2F06%2F07%2Fdu-first-directory%2F</url>
+      <content type="text"><![CDATA[centos 查看磁盘空间利用大小:df -h 查看当前目录所占空间大小:du -sh du命令查看一级目录centos: du -h –max-depth=1 mac: du -hd1\n]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[查看磁盘使用]]></title>
-      <url>%2F2016%2F06%2F07%2Fdu-first-directory%2F</url>
-      <content type="text"><![CDATA[centos 查看磁盘空间利用大小:df -h 查看当前目录所占空间大小:du -sh du命令查看一级目录centos: du -h –max-depth=1 mac: du -hd1\n]]></content>
+      <title><![CDATA[ssh免密码登录]]></title>
+      <url>%2F2016%2F06%2F07%2Fssh-login-without-password%2F</url>
+      <content type="text"><![CDATA[Note: 首先任意一个机器上生成公钥（ids_rsa.pub）和私钥(ids_rsa), 然后将公钥放到登录目标机器的authorized_keys中, 然后就可以使用私钥登录了。具体流程：http://chenlb.iteye.com/blog/211809]]></content>
     </entry>
 
     
@@ -234,16 +241,16 @@
 
     
     <entry>
-      <title><![CDATA[pomelo source analysis]]></title>
-      <url>%2F2015%2F06%2F30%2Fpomelo-source-analysis%2F</url>
-      <content type="text"><![CDATA[As a matter of fact, we can gain lots of benefits from reading source code, so I start to read a game framwork.Pomelo is a fast, scalable game server framework for node.js. I choose it for several reasons. open source code, hosted in Github. contains all the features of game server, and fully documented. help me to get know node.js. similar to my project in work. Main features framework connection: rpc, protocal]]></content>
+      <title><![CDATA[game robot]]></title>
+      <url>%2F2015%2F06%2F30%2Fgame-robot%2F</url>
+      <content type="text"><![CDATA[load test for game server. source code has been hosted on Github. Main features client basic feature: connect, logic injection client manager, multi client statistics Processfirst, fork the boom. then, modify the code for game server test. add the client with raw socket; add base features for game server:register/login; add logic injection;]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[game robot]]></title>
-      <url>%2F2015%2F06%2F30%2Fgame-robot%2F</url>
-      <content type="text"><![CDATA[load test for game server. source code has been hosted on Github. Main features client basic feature: connect, logic injection client manager, multi client statistics Processfirst, fork the boom. then, modify the code for game server test. add the client with raw socket; add base features for game server:register/login; add logic injection;]]></content>
+      <title><![CDATA[pomelo source analysis]]></title>
+      <url>%2F2015%2F06%2F30%2Fpomelo-source-analysis%2F</url>
+      <content type="text"><![CDATA[As a matter of fact, we can gain lots of benefits from reading source code, so I start to read a game framwork.Pomelo is a fast, scalable game server framework for node.js. I choose it for several reasons. open source code, hosted in Github. contains all the features of game server, and fully documented. help me to get know node.js. similar to my project in work. Main features framework connection: rpc, protocal]]></content>
     </entry>
 
     
