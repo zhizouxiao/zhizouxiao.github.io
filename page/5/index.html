@@ -281,6 +281,410 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zhizouxiao.github.io/2016/09/21/python-mock-unittest/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Eli Wang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/logo.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eli's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/21/python-mock-unittest/" itemprop="url">
+                  使用mock进行单元测试(python)
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-09-21T00:00:00+08:00">
+                2016-09-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/09/21/python-mock-unittest/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2016/09/21/python-mock-unittest/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>此代码涵盖了mock的基本用法，代码来源于mock文档 <a href="http://www.voidspace.org.uk/python/mock/getting-started.html" target="_blank" rel="external">mock doc</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">from</span> mock <span class="keyword">import</span> MagicMock, Mock, patch, ANY</div><div class="line"><span class="comment"># 1.使用mock 替换对象中的方法</span></div><div class="line"><span class="comment"># mock.assert_called_once_with 用于验证调用参数是否正确</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ProductionClass</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">method</span><span class="params">(self)</span>:</span></div><div class="line">        self.something(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">something</span><span class="params">(self, a, b, c)</span>:</span></div><div class="line">        <span class="keyword">pass</span></div><div class="line"></div><div class="line">real = ProductionClass()</div><div class="line">real.something = MagicMock()</div><div class="line">real.method()</div><div class="line">real.something.assert_called_once_with(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># 2.使用mock 替代传入参数</span></div><div class="line"><span class="comment"># assert_called_with 用于验证依赖对像是否被正确使用</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ProductionClass</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">closer</span><span class="params">(self, something)</span>:</span></div><div class="line">        something.close()</div><div class="line"></div><div class="line">real = ProductionClass()</div><div class="line">mock = Mock()</div><div class="line">real.closer(mock)</div><div class="line">mock.close.assert_called_with()</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># 3.使用Mock 替换Class</span></div><div class="line"><span class="comment"># 替换类于替换方法类似</span></div><div class="line"></div><div class="line"><span class="comment"># 例子需要构造module模块</span></div><div class="line"><span class="keyword">import</span> sys</div><div class="line">sys.modules[<span class="string">'module'</span>] = Mock()</div><div class="line"><span class="keyword">import</span> module</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">calculate</span><span class="params">()</span>:</span></div><div class="line">    instance = module.Helper()</div><div class="line">    <span class="keyword">return</span> instance.getFactor() *<span class="number">3</span></div><div class="line"></div><div class="line"><span class="keyword">with</span> patch(<span class="string">'module.Helper'</span>) <span class="keyword">as</span> mock:</div><div class="line">    instance = mock.return_value</div><div class="line">    instance.getFactor.return_value = <span class="number">1</span></div><div class="line">    result = calculate()</div><div class="line">    instance.getFactor.assert_called_once_with() <span class="comment">#方法被正确调用</span></div><div class="line">    <span class="keyword">assert</span> result == <span class="number">3</span> <span class="comment">#验证结果是否正确</span></div><div class="line"></div><div class="line"><span class="comment"># 4. side_effect, literate</span></div><div class="line"></div><div class="line">mock = MagicMock(side_effect=[<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>])</div><div class="line"><span class="keyword">assert</span> mock()==<span class="number">4</span></div><div class="line"><span class="keyword">assert</span> mock()==<span class="number">5</span></div><div class="line"><span class="keyword">assert</span> mock()==<span class="number">6</span></div><div class="line"></div><div class="line"><span class="comment"># 5. side_effect, Exception</span></div><div class="line">mock = Mock(side_effect=Exception(<span class="string">'Boom!'</span>))</div><div class="line"></div><div class="line"><span class="comment"># 6. side_effect, function</span></div><div class="line">vals = &#123;(<span class="number">1</span>, <span class="number">2</span>): <span class="number">1</span>, (<span class="number">2</span>, <span class="number">3</span>): <span class="number">2</span>&#125;</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">side_effect</span><span class="params">(*args)</span>:</span></div><div class="line">    <span class="keyword">return</span> vals[args]</div><div class="line"></div><div class="line">mock = MagicMock(side_effect=side_effect)</div><div class="line"><span class="keyword">assert</span> <span class="number">1</span>==mock(<span class="number">1</span>, <span class="number">2</span>)</div><div class="line"><span class="keyword">assert</span> <span class="number">2</span>==mock(<span class="number">2</span>, <span class="number">3</span>)</div><div class="line"></div><div class="line"><span class="comment"># 7. 基于类/对象为模板创建对象</span></div><div class="line"><span class="comment"># 使用模版不存在的方法或者属性会报错</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="keyword">pass</span></div><div class="line"></div><div class="line">a = SomeClass()</div><div class="line">mock = Mock(spec=a)</div><div class="line"><span class="comment">#mock.a</span></div><div class="line"><span class="comment">#mock.old_method() # 报错</span></div><div class="line"></div><div class="line"><span class="comment"># 8. mock 调用多次</span></div><div class="line">returns = [<span class="number">1</span>, <span class="number">2</span>]</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">side_effect</span><span class="params">(*args)</span>:</span></div><div class="line">  result = returns.pop(<span class="number">0</span>)</div><div class="line">  <span class="keyword">if</span> isinstance(result, Exception):</div><div class="line">    <span class="keyword">raise</span> result</div><div class="line">  <span class="keyword">return</span> result</div><div class="line"></div><div class="line">mock = Mock(side_effect=side_effect)</div><div class="line"><span class="keyword">assert</span> <span class="number">1</span>==mock(<span class="string">'first'</span>)</div><div class="line"><span class="keyword">assert</span> <span class="number">2</span>==mock(<span class="string">'second'</span>)</div><div class="line"></div><div class="line"><span class="comment"># 9. patch应用到多个</span></div><div class="line"><span class="keyword">from</span> unittest2 <span class="keyword">import</span> TestCase</div><div class="line"><span class="meta">@patch('module.SomeClass')</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyTest</span><span class="params">(TestCase)</span>:</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_one</span><span class="params">(self, MockSomeClass)</span>:</span></div><div class="line">        self.assertTrue(module.SomeClass <span class="keyword">is</span> MockSomeClass)</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_two</span><span class="params">(self, MockSomeClass)</span>:</span></div><div class="line">        self.assertTrue(module.SomeClass <span class="keyword">is</span> MockSomeClass)</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">not_a_test</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">return</span> <span class="string">'something'</span></div><div class="line"></div><div class="line">MyTest(<span class="string">'test_one'</span>).test_one()</div><div class="line">MyTest(<span class="string">'test_two'</span>).test_two()</div><div class="line">MyTest(<span class="string">'test_two'</span>).not_a_test()</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyTest</span><span class="params">(TestCase)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">setUp</span><span class="params">(self)</span>:</span></div><div class="line">        self.patcher = patch(<span class="string">'module.foo'</span>)</div><div class="line">        self.mock_foo = self.patcher.start()</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_foo</span><span class="params">(self)</span>:</span></div><div class="line">        self.assertTrue(module.foo <span class="keyword">is</span> self.mock_foo)</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">tearDown</span><span class="params">(self)</span>:</span></div><div class="line">        self.patcher.stop()</div><div class="line"></div><div class="line">MyTest(<span class="string">'test_foo'</span>).run()</div><div class="line"></div><div class="line"><span class="comment"># 10. ANY</span></div><div class="line">mock = Mock(return_value=<span class="keyword">None</span>)</div><div class="line">mock(<span class="string">'foo'</span>, bar=object())</div><div class="line">mock.assert_called_once_with(<span class="string">'foo'</span>, bar=ANY)</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zhizouxiao.github.io/2016/08/11/json-format-linux/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Eli Wang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/logo.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eli's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/08/11/json-format-linux/" itemprop="url">
+                  命令行下格式化json
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-08-11T00:00:00+08:00">
+                2016-08-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/08/11/json-format-linux/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2016/08/11/json-format-linux/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python2 -m json.tool xxx.json</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zhizouxiao.github.io/2016/08/06/add-method-to-python-object/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Eli Wang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/logo.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eli's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/08/06/add-method-to-python-object/" itemprop="url">
+                  向python对象动态添加方法
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-08-06T00:00:00+08:00">
+                2016-08-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/08/06/add-method-to-python-object/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2016/08/06/add-method-to-python-object/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">barFighters</span><span class="params">( self )</span>:</span></div><div class="line">    <span class="keyword">print</span> <span class="string">"barFighters"</span></div><div class="line"></div><div class="line">a.barFighters = barFighters</div><div class="line">a.barFighters()</div><div class="line"></div><div class="line">Traceback (most recent call last):</div><div class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</div><div class="line">TypeError: barFighters() takes exactly <span class="number">1</span> argument (<span class="number">0</span> given)</div><div class="line"></div><div class="line"><span class="keyword">import</span> types</div><div class="line">a.barFighters = types.MethodType( barFighters, a )</div><div class="line">a.barFighters()</div><div class="line">barFighters</div></pre></td></tr></table></figure>
+<p>&gt;</p>
+<blockquote>
+<p>引用：<br><a href="http://stackoverflow.com/questions/972/adding-a-method-to-an-existing-object-instance" target="_blank" rel="external">http://stackoverflow.com/questions/972/adding-a-method-to-an-existing-object-instance</a></p>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://zhizouxiao.github.io/2016/07/25/svn-commond/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1294,438 +1698,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://zhizouxiao.github.io/2016/05/15/my-travel-to-Tibet/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Eli Wang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/logo.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Eli's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/15/my-travel-to-Tibet/" itemprop="url">
-                  川藏线
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-05-15T00:00:00+08:00">
-                2016-05-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/travel/" itemprop="url" rel="index">
-                    <span itemprop="name">travel</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            <!--noindex-->
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/05/15/my-travel-to-Tibet/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2016/05/15/my-travel-to-Tibet/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-              <!--/noindex-->
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>不知不觉已经完成了川藏线将近一个月的时间，一路走来，有风雨，有快乐，也有些许感悟，更重要的是大量的漂亮的照片。<br>所有的<a href="http://pan.baidu.com/s/1jHDYH2Q" target="_blank" rel="external">照片</a> 都已经分享在百度云。</p>
-<img src="/2016/05/15/my-travel-to-Tibet/with_dog.JPG" alt="meet a dog" title="meet a dog">
-<p><br></p>
-<p><figure class="left-align quarter-width fa-rotate-90"><img src="/2016/05/15/my-travel-to-Tibet/border.JPG" alt="西藏界"><br></figure><br><br><br><img src="/2016/05/15/my-travel-to-Tibet/s1.JPG" alt="风景1" title="风景1"><br><img src="/2016/05/15/my-travel-to-Tibet/s2.JPG" alt="风景2" title="风景2"><br><br></p>
-<p><figure class="left-align quarter-width fa-rotate-90"><img src="/2016/05/15/my-travel-to-Tibet/broken_road.JPG" alt="塌方"><br></figure><br><br><br><br></p>
-<p><figure class="left-align quarter-width fa-rotate-90"><img src="/2016/05/15/my-travel-to-Tibet/ranwuhu.JPG" alt="然乌湖"><br></figure><br><br><br><img src="/2016/05/15/my-travel-to-Tibet/ranwuhu2.JPG" alt="然乌湖" title="然乌湖"><br><img src="/2016/05/15/my-travel-to-Tibet/ranwuhu_in_snow.JPG" alt="然乌湖" title="然乌湖"><br><br></p>
-<p><figure class="left-align quarter-width fa-rotate-90"><img src="/2016/05/15/my-travel-to-Tibet/rest.JPG" alt="休息"><br></figure><br><br><br><br></p>
-<p><figure class="left-align quarter-width fa-rotate-90"><img src="/2016/05/15/my-travel-to-Tibet/I1.JPG" alt="路标"><br></figure><br><br><br><img src="/2016/05/15/my-travel-to-Tibet/hike.JPG" alt="爬山" title="爬山"><br><img src="/2016/05/15/my-travel-to-Tibet/pray.JPG" alt="祈福" title="祈福"></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://zhizouxiao.github.io/2015/07/20/rpc-details/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Eli Wang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/logo.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Eli's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/07/20/rpc-details/" itemprop="url">
-                  Rpc retails
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-07-20T00:00:00+08:00">
-                2015-07-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-            <!--noindex-->
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2015/07/20/rpc-details/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2015/07/20/rpc-details/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-              <!--/noindex-->
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>todo</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://zhizouxiao.github.io/2015/07/18/server-performance-monitoring/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Eli Wang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/logo.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Eli's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/07/18/server-performance-monitoring/" itemprop="url">
-                  Server performance monitoring
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-07-18T00:00:00+08:00">
-                2015-07-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-            <!--noindex-->
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2015/07/18/server-performance-monitoring/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2015/07/18/server-performance-monitoring/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-              <!--/noindex-->
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>todo</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1775,7 +1747,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">55</span>
+                <span class="site-state-item-count">58</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1797,7 +1769,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

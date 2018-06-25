@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title><![CDATA[在bash中的快捷键]]></title>
+      <url>%2F2018%2F06%2F25%2Fmoving-in-bash%2F</url>
+      <content type="text"><![CDATA[在bash中的快捷键 节省手指，低碳操作 基本移动 向后移动一个字符 Ctrl+b 向前移动一个字符 Ctrl+f 删除当前字符 Ctrl+d 撤销 Ctrl+- 快速移动 移动到一行的开头 Ctrl+a 移动到一行的结尾 Ctrl+e 向前移动一个单词 Meta+f 向后移动一个单词 Meta+b 剪切与粘贴 剪切到一行末尾 Ctrl+k 剪切到单词末尾 Meta+d 剪切到单词开始 Meta+Backspace 粘贴 Ctrl+y]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[均线]]></title>
+      <url>%2F2018%2F05%2F20%2Fmoving-average%2F</url>
+      <content type="text"><![CDATA[绝对金叉绝对金叉是是指三条均线同时交叉，且发生交叉的必须是三条周期较短的均线，同时从上到下必须按照周期由短到长的顺序排列。例如，选择5日均线、10日均线、20日均线和60日均线，则交叉的三条均线必须是5日均线、10日均线和20日均线，60日均线则不在交叉之列。同时，金叉形成之时，必须按照5日均线在上，10日均线居中，20日均线在下的顺序排列，否则就不能看作是绝对金叉。 黄金交叉当10日均线由下往上穿越30日均线，形成10日均线在上，30日均线在下时，其交叉点就是黄金交叉，黄金交叉是多头的表现，出现黄金交叉后，后市会有一定的涨幅空间，这是进场的最佳时机。 死亡交叉当10日均线由上往下穿越30日均线，形成30日均线在上，10日均线在下时，其交点称之为”死亡交叉”，”死亡交叉”预示空头市场来临，股市将下跌此时是出场的最佳时机。 均线粘合均线粘合出现暗示市场即将出现大的转势，均线一旦发散，转势也将开始。具体的转势方向一般可以结合均线粘合出现之前的市场走势进行判断。如果均线粘合之前，市场经历了大幅上扬，则市场即将进入大熊市；如果均线接近粘合之前，市场经历了一次大跌并且已经横盘整理一段时间，则有可能迎来新的发展机会。 基本的均线使用方法 平均线从下降逐渐转为水平，且有网上方抬头迹象，而价格从平均线的下方突破平均线时，便是买进讯号。 价格趋势走在平均线上，价格下跌并未跌破平均线且立刻反转上升，则也是买进讯号。 价格突然暴跌，跌破平均线，而且远离平均线，则有可能反弹上升，亦为买进讯号。 价格突然暴涨，突破平均线，且远离平均线，则有可能反弹回跌，为卖出时机。 平均线从上升逐渐转为横盘或下跌，而且价格向下跌破平均线，为卖出信号。 周线 懂得去关注周线股价是否创历史新低。 选股的时候，在研究个股基本面没有问题之后，有业绩支撑，非妖股，就得看这只股的股价是否创出新低，因为很多个股的转机都是在创历史新低以后出现的。 用10周线判断上升还是下降通道。 (1)10周均线趋势向下的股票，不应该买入。20周均线趋势向下代表下降通道走势，特别是在30周线压制下的10周线下的股票。 (2)10周均线趋势向上的股票，可以在10周均线附近介入。10周均线趋势向上的股票，表示庄家想把这只股票做上去。 5周均线也是重要指标! 如果某股在高点放量后，其后为两连阴，并跌破5周均线，则后市走势将进入持续下跌，此时应坚决退出。相反当某股放量穿过5周均线并站稳两周时，则持续上涨的可能性非常大，此时可积极介入。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[技术分析参数]]></title>
+      <url>%2F2018%2F05%2F19%2Ftechnical-analysis%2F</url>
+      <content type="text"><![CDATA[股票技术分析 作为价值分析的辅助，懂一些指标，可以辅助判断 均线移动平均线，Moving Average，简称MA，MA是用统计分析的方法，将一定时期内的证券价格（指数）加以平均，并把不同时间的平均值连接起来，形成一根MA，用以观察证券价格变动趋势的一种技术指标。 移动平均线 常用线有5天、10天、30天、60天、120天和240天的指标。其中，5天和10天的短期移动平均线，是短线操作的参照指标，称做日均线指标；30天和60天的是中期均线指标，称做季均线指标；120天、240天的是长期均线指标，称做年均线指标。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[(linux常用命令)sed]]></title>
       <url>%2F2018%2F05%2F08%2Fsed%2F</url>
       <content type="text"><![CDATA[Mac1find ./ -type f -name "*.py" -exec sed -i '' -e 's/foo/bar/' &#123;&#125; \; Linux1find . -type f -name "*baz*" -exec sed -i 's/foo/bar/g' &#123;&#125; + 常见错误：sed: RE error: illegal byte sequence导入如下命令，可恢复正常12export LC_COLLATE='C'export LC_CTYPE='C']]></content>
@@ -367,16 +388,16 @@
 
     
     <entry>
-      <title><![CDATA[pomelo source analysis]]></title>
-      <url>%2F2015%2F06%2F30%2Fpomelo-source-analysis%2F</url>
-      <content type="text"><![CDATA[As a matter of fact, we can gain lots of benefits from reading source code, so I start to read a game framwork.Pomelo is a fast, scalable game server framework for node.js. I choose it for several reasons. open source code, hosted in Github. contains all the features of game server, and fully documented. help me to get know node.js. similar to my project in work. Main features framework connection: rpc, protocal]]></content>
+      <title><![CDATA[game robot]]></title>
+      <url>%2F2015%2F06%2F30%2Fgame-robot%2F</url>
+      <content type="text"><![CDATA[load test for game server. source code has been hosted on Github. Main features client basic feature: connect, logic injection client manager, multi client statistics Processfirst, fork the boom. then, modify the code for game server test. add the client with raw socket; add base features for game server:register/login; add logic injection;]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[game robot]]></title>
-      <url>%2F2015%2F06%2F30%2Fgame-robot%2F</url>
-      <content type="text"><![CDATA[load test for game server. source code has been hosted on Github. Main features client basic feature: connect, logic injection client manager, multi client statistics Processfirst, fork the boom. then, modify the code for game server test. add the client with raw socket; add base features for game server:register/login; add logic injection;]]></content>
+      <title><![CDATA[pomelo source analysis]]></title>
+      <url>%2F2015%2F06%2F30%2Fpomelo-source-analysis%2F</url>
+      <content type="text"><![CDATA[As a matter of fact, we can gain lots of benefits from reading source code, so I start to read a game framwork.Pomelo is a fast, scalable game server framework for node.js. I choose it for several reasons. open source code, hosted in Github. contains all the features of game server, and fully documented. help me to get know node.js. similar to my project in work. Main features framework connection: rpc, protocal]]></content>
     </entry>
 
     
