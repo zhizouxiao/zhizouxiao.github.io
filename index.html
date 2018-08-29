@@ -281,6 +281,149 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zhizouxiao.github.io/2018/08/29/python2-unicode-utf8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Eli Wang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/logo.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eli's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/08/29/python2-unicode-utf8/" itemprop="url">
+                  python2 中 unicode encode decode
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-29T13:24:24+08:00">
+                2018-08-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/08/29/python2-unicode-utf8/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/08/29/python2-unicode-utf8/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="python2-中-unicode-encode-decode-utf8"><a href="#python2-中-unicode-encode-decode-utf8" class="headerlink" title="python2 中 unicode encode decode utf8"></a>python2 中 unicode encode decode utf8</h3><h4 id="unicode"><a href="#unicode" class="headerlink" title="unicode"></a>unicode</h4><ol>
+<li>unicode 相当于 code point(0-0x10ffff的整数).</li>
+<li>unicode编码的缺点：浪费空间(每个字符对应32-bit)</li>
+</ol>
+<h4 id="utf8编码的优点："><a href="#utf8编码的优点：" class="headerlink" title="utf8编码的优点："></a>utf8编码的优点：</h4><ol>
+<li>能处理所有unicode code point</li>
+<li>节省空间，去掉了0字节</li>
+<li>ASCII字符串也是有效的UTF8字符串</li>
+<li>如果字节丢失，容易找到下一个code point</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># python</span></div><div class="line">a = <span class="string">"我们"</span>   <span class="comment"># utf8 编码的字符串</span></div><div class="line">a_unicode = a.decode(<span class="string">"utf8"</span>) <span class="comment"># decode 为 unicode</span></div><div class="line"><span class="keyword">assert</span> a_unicode == <span class="string">u"我们"</span></div><div class="line"></div><div class="line">b = a_unicode.encode(<span class="string">"utf8"</span>) <span class="comment"># encode utf8 还原</span></div><div class="line"><span class="keyword">assert</span> a==b</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://zhizouxiao.github.io/2018/06/25/moving-in-bash/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1688,176 +1831,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://zhizouxiao.github.io/2018/02/02/docker-intro/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Eli Wang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/logo.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Eli's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2018/02/02/docker-intro/" itemprop="url">
-                  docker 入门
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-02T17:12:17+08:00">
-                2018-02-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-            <!--noindex-->
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/02/02/docker-intro/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2018/02/02/docker-intro/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-              <!--/noindex-->
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="docker-入门"><a href="#docker-入门" class="headerlink" title="docker 入门"></a>docker 入门</h3><ol>
-<li><p>linux启动docker服务<br>sudo systemctl start docker</p>
-</li>
-<li><p>建立一个container<br>sudo docker run -i -t –name=fun ubuntu /bin/bash</p>
-</li>
-<li><p>显示所有container<br>docker ps -a</p>
-</li>
-<li><p>启动container<br>sudo docker start fun</p>
-</li>
-<li><p>进入到已经启动的container<br>sudo docker attach fun</p>
-</li>
-<li><p>守护container<br>sudo docker run -i -t –name=daemon -d ubuntu /bin/bash -c “while true; do echo hello world; sleep 1; done”<br>查看日志<br>sudo docker logs -ft daemon</p>
-</li>
-<li><p>检测container中的进程<br>sudo docker top daemon</p>
-</li>
-<li><p>在container中执行命令<br>sudo docker exec -d daemon touch /etc/new_config<br>sudo docker exec -i -t daemon /bin/bash</p>
-</li>
-<li><p>停止contianer<br>sudo docker stop fun</p>
-</li>
-<li><p>docker退出后，重新启动<br>sudo docker run -i -t –name=daemon2 –restart=always -d ubuntu /bin/bash -c “while true; do echo hello world; sleep 1; done”</p>
-</li>
-<li><p>删除container<br>sudo docker rm fun<br>sudo docker rm `docker ps -a -q`</p>
-</li>
-</ol>
-<h3 id="镜像images"><a href="#镜像images" class="headerlink" title="镜像images"></a>镜像images</h3><ol>
-<li><p>列出所有images<br>sudo docker images</p>
-</li>
-<li><p>下载image<br>sudo docker pull fedora</p>
-</li>
-<li><p>搜索image<br>sudo docker search puppet</p>
-</li>
-<li><p>build<br>默认从失败的步骤继续build<br>sudo docker build -t=”zhizouxiao/static_web” .<br>指定无缓存<br>sudo docker build –no-cache -t=”zhizouxiao/static_web” . </p>
-</li>
-<li><p>查看image历史<br>sudo docker history c7039fdaee4d</p>
-</li>
-<li><p>运行build之后的image, host端口为8080，container端口为80<br>sudo docker run -p 8080:80 –name=static_web zhizouxiao/static_web nginx -g “daemon off;”</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1907,7 +1880,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">58</span>
+                <span class="site-state-item-count">59</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1929,7 +1902,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-count">22</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

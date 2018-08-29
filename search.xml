@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[python2 中 unicode encode decode]]></title>
+      <url>%2F2018%2F08%2F29%2Fpython2-unicode-utf8%2F</url>
+      <content type="text"><![CDATA[python2 中 unicode encode decode utf8unicode unicode 相当于 code point(0-0x10ffff的整数). unicode编码的缺点：浪费空间(每个字符对应32-bit) utf8编码的优点： 能处理所有unicode code point 节省空间，去掉了0字节 ASCII字符串也是有效的UTF8字符串 如果字节丢失，容易找到下一个code point 1234567# pythona = "我们" # utf8 编码的字符串a_unicode = a.decode("utf8") # decode 为 unicodeassert a_unicode == u"我们"b = a_unicode.encode("utf8") # encode utf8 还原assert a==b]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[在bash中的快捷键]]></title>
       <url>%2F2018%2F06%2F25%2Fmoving-in-bash%2F</url>
       <content type="text"><![CDATA[在bash中的快捷键 节省手指，低碳操作 基本移动 向后移动一个字符 Ctrl+b 向前移动一个字符 Ctrl+f 删除当前字符 Ctrl+d 撤销 Ctrl+- 快速移动 移动到一行的开头 Ctrl+a 移动到一行的结尾 Ctrl+e 向前移动一个单词 Meta+f 向后移动一个单词 Meta+b 剪切与粘贴 剪切到一行末尾 Ctrl+k 剪切到单词末尾 Meta+d 剪切到单词开始 Meta+Backspace 粘贴 Ctrl+y]]></content>
@@ -318,16 +325,16 @@
 
     
     <entry>
-      <title><![CDATA[ssh免密码登录]]></title>
-      <url>%2F2016%2F06%2F07%2Fssh-login-without-password%2F</url>
-      <content type="text"><![CDATA[Note: 首先任意一个机器上生成公钥（ids_rsa.pub）和私钥(ids_rsa), 然后将公钥放到登录目标机器的authorized_keys中, 然后就可以使用私钥登录了。具体流程：http://chenlb.iteye.com/blog/211809]]></content>
+      <title><![CDATA[查看磁盘使用]]></title>
+      <url>%2F2016%2F06%2F07%2Fdu-first-directory%2F</url>
+      <content type="text"><![CDATA[centos 查看磁盘空间利用大小:df -h 查看当前目录所占空间大小:du -sh du命令查看一级目录centos: du -h –max-depth=1 mac: du -hd1\n]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[查看磁盘使用]]></title>
-      <url>%2F2016%2F06%2F07%2Fdu-first-directory%2F</url>
-      <content type="text"><![CDATA[centos 查看磁盘空间利用大小:df -h 查看当前目录所占空间大小:du -sh du命令查看一级目录centos: du -h –max-depth=1 mac: du -hd1\n]]></content>
+      <title><![CDATA[ssh免密码登录]]></title>
+      <url>%2F2016%2F06%2F07%2Fssh-login-without-password%2F</url>
+      <content type="text"><![CDATA[Note: 首先任意一个机器上生成公钥（ids_rsa.pub）和私钥(ids_rsa), 然后将公钥放到登录目标机器的authorized_keys中, 然后就可以使用私钥登录了。具体流程：http://chenlb.iteye.com/blog/211809]]></content>
     </entry>
 
     
@@ -388,16 +395,16 @@
 
     
     <entry>
-      <title><![CDATA[game robot]]></title>
-      <url>%2F2015%2F06%2F30%2Fgame-robot%2F</url>
-      <content type="text"><![CDATA[load test for game server. source code has been hosted on Github. Main features client basic feature: connect, logic injection client manager, multi client statistics Processfirst, fork the boom. then, modify the code for game server test. add the client with raw socket; add base features for game server:register/login; add logic injection;]]></content>
+      <title><![CDATA[pomelo source analysis]]></title>
+      <url>%2F2015%2F06%2F30%2Fpomelo-source-analysis%2F</url>
+      <content type="text"><![CDATA[As a matter of fact, we can gain lots of benefits from reading source code, so I start to read a game framwork.Pomelo is a fast, scalable game server framework for node.js. I choose it for several reasons. open source code, hosted in Github. contains all the features of game server, and fully documented. help me to get know node.js. similar to my project in work. Main features framework connection: rpc, protocal]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[pomelo source analysis]]></title>
-      <url>%2F2015%2F06%2F30%2Fpomelo-source-analysis%2F</url>
-      <content type="text"><![CDATA[As a matter of fact, we can gain lots of benefits from reading source code, so I start to read a game framwork.Pomelo is a fast, scalable game server framework for node.js. I choose it for several reasons. open source code, hosted in Github. contains all the features of game server, and fully documented. help me to get know node.js. similar to my project in work. Main features framework connection: rpc, protocal]]></content>
+      <title><![CDATA[game robot]]></title>
+      <url>%2F2015%2F06%2F30%2Fgame-robot%2F</url>
+      <content type="text"><![CDATA[load test for game server. source code has been hosted on Github. Main features client basic feature: connect, logic injection client manager, multi client statistics Processfirst, fork the boom. then, modify the code for game server test. add the client with raw socket; add base features for game server:register/login; add logic injection;]]></content>
     </entry>
 
     
